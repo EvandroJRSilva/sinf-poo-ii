@@ -1,0 +1,94 @@
+%------------------------------------------------------------------------------
+% PACOTES ---------------------------------------------------------------------
+
+% Encoding -------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+% Idioma ---------------------
+\usepackage[brazil]{babel}
+
+% Fonte ----------------------
+\usepackage{newtxtext}
+%\usepackage{mlmodern}
+%\usepackage[default,regular,black]{sourceserifpro}
+
+% Links ----------------------
+\usepackage{hyperref}
+
+% Personalização -------------
+%	Cabeçalhos ---------------
+\usepackage{fancyhdr}
+% 	Títulos ------------------
+\usepackage{titlesec}
+%	Layout da página ---------
+\usepackage[top=4.5cm, 
+            left=2cm, 
+            right=2cm, 
+            bottom=2cm,
+            headheight=3cm,
+            headsep=1cm]{geometry}
+%	Listagem -----------------
+\usepackage{enumitem}
+%	Cores --------------------
+\usepackage{xcolor}
+%	Colunas
+\usepackage{multicol}
+%	Linhas
+\usepackage{multirow}
+
+% Justificação ---------------
+\usepackage{microtype}
+\usepackage{ragged2e}
+
+% Texto aleatório ------------
+\usepackage{lipsum}
+
+% Matemática -----------------
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+
+% Gráficos -------------------
+\usepackage{graphicx}
+
+% Tabelas --------------------
+\usepackage{tabularray}
+
+
+%------------------------------------------------------------------------------
+% CONFIGURAÇÕES ---------------------------------------------------------------
+
+% Header style ---------------
+\pagestyle{fancy}
+\fancyhf{} % clear all headers and footers
+\fancyhead[C]{
+    \begin{tblr}{c c c}
+        \SetCell[r=4]{halign=c, valign=m, wd=0.12\linewidth}\includegraphics[width=\linewidth]{logo1.png} & \large \textbf{MINISTÉRIO DA EDUCAÇÃO} & \SetCell[r=4]{halign=c, valign=m, wd=0.1\linewidth}\includegraphics[width=\linewidth]{logo2.png}\\
+        & \normalsize \textbf{UNIVERSIDADE FEDERAL DO PIAUÍ - UFPI} & \\
+        & \textbf{CAMPUS SENADOR HELVÍDIO NUNES DE BARROS - PICOS} & \\
+        & \textbf{BACHARELADO EM SISTEMAS DE INFORMAÇÃO} & \\
+    \end{tblr}
+}
+%\fancyhead[C]{
+%    \begin{tabular}{c c c}
+%        \multirow{4}{*}{\parbox{0.12\linewidth}{\centering\includegraphics[width=\linewidth]{logo1.png}}} & \large \textbf{MINISTÉRIO DA EDUCAÇÃO} & \multirow{4}{*}{\parbox{0.1\linewidth}{\centering\includegraphics[width=\linewidth]{logo2.png}}}\\
+%        & \normalsize \textbf{UNIVERSIDADE FEDERAL DO PIAUÍ - UFPI} & \\
+%        & \textbf{CAMPUS SENADOR HELVÍDIO NUNES DE BARROS - PICOS} & \\
+%        & \textbf{BACHARELADO EM SISTEMAS DE INFORMAÇÃO} & \\
+%    \end{tabular}
+%}
+
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\thepage}
+
+% Title style ----------------
+%	Section ------------------
+\titleformat{\section}{\normalsize\bfseries}{\thesection.}{0.5em}{}
+%	Subsection
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{0.5em}{}
+
+% Itemize
+\setlist{nosep}
+\setlist[itemize, 1]{label=\textbullet}
+\setlist[itemize, 2]{label=--}
+\setlist[itemize, 3]{label=$\circ$}
+\setlist[itemize, 4]{label=$\triangleright$}

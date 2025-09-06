@@ -1,0 +1,1163 @@
+\documentclass{beamer}
+
+\usetheme{Antibes}
+
+% Loading preambulo
+\input{preambulo.tex}
+
+% Title
+\title[AP 00]{Programação Orientada a Objetos II}
+% Subtitle
+\subtitle{Apresentação da Disciplina}
+% Author of the presentation
+\author[E.J.R. Silva]{Evandro J.R. Silva}
+% date of the presentation
+\date{}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}{Sumário}
+    \tableofcontents
+\end{frame}
+
+%===============================================================================
+% SECTION 1 ====================================================================
+%===============================================================================
+\section{Informações gerais}
+
+%-------------------------------------------------------------------------------
+% SUBSECTION 1.1 ---------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\subsection{Ementa \& Objetivos}
+
+\begin{frame}{Ementa}
+    \begin{itemize}
+        \justifying
+        \item Interfaces e processamento de eventos.
+        \item Programação gráfica.
+        \item Manipulação de Arquivos.
+        \item Programação concorrente usando Multithreading.
+        \item Programação em rede.
+        \item Conectividade com bancos de dados: JDBC.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Objetivos}
+    \begin{itemize}
+        \justifying
+        \item Aprender a criar aplicações gráficas em JavaFX, entendendo o modelo de cena, tratamento de eventos e boas práticas de organização de telas.
+        \item Aprender a salvar, carregar e processar dados, e noções de execução paralela, integrando com interfaces gráficas JavaFX.
+        \item Introduzir comunicação em rede e persistência com JDBC, integrando os resultados em uma aplicação gráfica em JavaFX.
+    \end{itemize}
+\end{frame}
+
+%-------------------------------------------------------------------------------
+% SUBSECTION 1.2 ---------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\subsection{Bibliografia}
+
+\begin{frame}{Bibliografia}
+    \begin{itemize}
+        \item \textbf{Básica - PPC}
+        \begin{itemize}
+            \justifying
+            \scriptsize
+            \item BARNES, D. J., KÖLLING, M. \textbf{Programação Orientada a Objetos com Java: Uma introdução prática usando BLUEJ}. 4 ed. São Paulo: Pearson Prentice Hall, 2009.
+            \item DEITEL, H. M., DEITEL, P. J. \textbf{Java: Como programar}. 8 ed. São Paulo: Pearson Prentice Hall, 2010.
+            \item FREEMAN, E., FREEMAN, E. \textbf{Use a Cabeça Padrões de Projetos}. 2 ed. Rio de Janeiro: Altabooks, 2007.
+        \end{itemize}
+        \normalsize
+        \item \textbf{Bibliografia complementar - PPC}
+        \begin{itemize}
+            \justifying
+            \scriptsize
+            \item SIERRA, K.; BATES, B. \textbf{Use a Cabeça! Java}. 1 ed. Rio de Janeiro: AltaBooks, 2005.
+            \item HORSTMANN, C. S.; CORNELL, G. \textbf{Core Java 2: Fundamentos}. 7 ed. Rio de Janeiro: Alta Books, 2005.
+            \item KURNIAWAN, Budi. \textbf{Java para Web com Servlets, JSP e EJB}. 1 ed. Rio de Janeiro: Ciência Moderna, 2002.
+            \item CADENHEAD, Rogers; LEMAY, Laura. \textbf{Aprenda em 21 dias Java 2}. 4 ed. Rio de Janeiro: Elsevier, 2005.
+            \item HORSTMANN, C. \textbf{Big Java}. 4 ed. John Wiley e Sons, 2006.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Bibliografia}
+    \begin{itemize}
+        \item \textbf{Básica - Livros/Fontes mais recentes}
+        \begin{itemize}
+            \justifying
+            \scriptsize
+            \item \textbf{Learn Java}. Disponível em \url{https://dev.java/learn/}. Acesso em 19 ago. 2025.
+            \item DOWNEY, Allen B.; MAYFIELD, Chris. \textbf{Think Java}. 2. ed., versão 7.1.0. Needham: Green Tea Press, 2020. Disponível em \url{https://greenteapress.com/thinkjava7/thinkjava2.pdf}. Acesso em 19 ago. 2025.
+            \item ECK, David J. \textbf{Introduction to Programming Using Java: Version 9.0, Swing Edition}. Disponível em \url{https://math.hws.edu/javanotes-swing/}. Acesso em 19 ago. 2025.
+            \item ECK, David J. \textbf{Introduction to Programming Using Java: Version 9.0, JavaFX Edition}. Disponível em \url{https://math.hws.edu/javanotes/}. Acesso em 19 ago. 2025.
+        \end{itemize}
+        \normalsize
+        \item \textbf{Bibliografia complementar - Livros/Fontes mais recentes}
+        \begin{itemize}
+            \justifying
+            \scriptsize
+            \item \textbf{Java Notes for Professionals}. Disponível em \url{https://goalkicker.com/JavaBook/JavaNotesForProfessionals.pdf}. Acesso em 19 ago. 2025.
+            \item \textbf{Introduction to JDBC}. Disponível em \url{https://www.baeldung.com/java-jdbc}. Acesso em 19 ago. 2025.
+            \item \textbf{Accessing data with MySQL}. Disponível em \url{https://spring.io/guides/gs/accessing-data-mysql}. Acesso em 19 ago. 2025.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+%-------------------------------------------------------------------------------
+% SUBSECTION 1.3 ---------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\subsection{Conteúdo Programático}
+
+\begin{frame}{Conteúdo Programático}
+    \begin{itemize}
+        \item \textbf{Parte I - Interfaces, Eventos e Programação Gráfica}
+            \begin{enumerate}
+                \justifying
+                \item JavaFX
+                    \begin{itemize}
+                        \item Fundamentos.
+                        \item Modelo de eventos e propriedades.
+                        \item Layouts.
+                        \item Controles básicos.
+                        \item Listas e tabelas.
+                        \item Validação e feedback.
+                        \item Menus, toolbars e atalhos.
+                        \item Organização de telas e navegação.
+                    \end{itemize}
+            \end{enumerate}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Conteúdo Programático}
+    \begin{itemize}
+        \justifying
+        \item \textbf{Parte II - Arquivos e Multithreading}
+            \begin{enumerate}
+                \justifying
+                \item Arquivos de texto simples.
+                \item Threads em Java.
+                \item Salvando dados de formulários em arquivos.
+                \item Importar/exportar dados em CSV.
+                \item Leitura de arquivo para análise.
+                \item Serialização de objetos.
+                \item Threads simulando tarefas demoradas.
+                \item Uso de \texttt{Task} e \texttt{Service} no JavaFX.
+            \end{enumerate}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Conteúdo Programático}
+    \begin{itemize}
+        \justifying
+        \item \textbf{Parte III - Programação em Rede e Banco de Dados}
+            \begin{enumerate}
+                \justifying
+                \item Noções básicas de rede.
+                \item JDBC.
+                \item Cliente TCP simples em JavaFX.
+                \item Servidor TCP simples.
+                \item Conexão SQLite com JDBC em JavaFX.
+                \item Inserção de registros no banco via GUI.
+                \item Atualização e exclusão de registros via GUI.
+                \item Integração GUI + Banco + Rede.
+            \end{enumerate}
+    \end{itemize}
+\end{frame}
+
+%-------------------------------------------------------------------------------
+% SUBSECTION 1.3 ---------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\subsection{Avaliação}
+
+\begin{frame}{Avaliação}
+    \begin{itemize}
+        \justifying
+        \item Ao \textbf{fim de cada unidade}, será realizada uma \textbf{avaliação parcial} dos conteúdos ministrados durante o curso da unidade, \alert{\textbf{totalizando em 03 (três) avaliações}}.
+        \item A \textbf{nota de cada avaliação} poderá ser \textbf{composta por um ou mais instrumentos de avaliação}, de acordo com um dos seguintes casos:
+        \begin{enumerate}
+            \justifying
+            \item Uma prova escrita;
+            \item Um ou mais trabalhos (individuais ou em grupo);
+            \item Um ou mais trabalhos, mais uma prova escrita.
+        \end{enumerate}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Avaliação}
+    \begin{itemize}
+        \justifying
+        \item Nos casos em que a \textbf{avaliação} for \textbf{composta por mais de um instrumento}, será realizado o \textbf{somatório} ou a \textbf{média ponderada} das \textbf{notas obtidas em cada instrumento} para compor a \textbf{nota final} de uma \textbf{avaliação parcial}.
+        \item Os instrumentos a serem utilizados em cada avaliação serão definidos e informados no decorrer do curso.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Avaliação}
+    \begin{itemize}
+        \justifying
+        \item As \textbf{notas} obedecem a uma escala de \textbf{0,0 (zero)} a \textbf{10,0 (dez)}, contando até a primeira ordem decimal com possíveis arredondamentos.
+        \item Considerar-se-á \textbf{aprovado} na disciplina o aluno que obtiver \textbf{assiduidade igual ou superior a 75\%} e a \textbf{média aritmética} nas \underline{avaliações parciais (média parcial)} \textbf{igual ou superior a 7,0 (sete)}
+        \begin{itemize}
+            \justifying
+            \item OU que se submeta a \alert<2>{exame final} e obtenha média aritmética entre a média parcial e exame final (média final) igual ou superior a 6,0 (seis).
+            \begin{itemize}
+                \justifying
+                \item<2> Terá direito de realizar exame final o aluno que satisfaça os requisitos de assiduidade e que obtenha média parcial maior ou igual a 4,0 (quatro) e menor que 7,0 (sete).
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+%-------------------------------------------------------------------------------
+% SUBSECTION 1.4 ---------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\subsection{Calendário}
+
+\begin{frame}{Calendário}
+    \centering
+    \begin{tblr}{c c c}
+        \aula AULA & \feriado FERIADO & \prova AVALIAÇÃO
+    \end{tblr}
+    
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \begin{table}
+                \centering
+                \textbf{SETEMBRO}\\ \vspace{0.15cm}
+                \begin{tblr}{Q[c,m] Q[c,m] Q[c,m] Q[c,m] Q[c,m]}
+                    \hline
+                    \textbf{S} & \textbf{T} & \textbf{Q} & \textbf{Q} & \textbf{S} \\
+                    \hline
+                    01 & 02 & 03 & 04 & \aula\esta{05}\\
+                    08 & \aula09 & 10 & 11 & \aula12\\
+                    15 & \aula16 & 17 & 18 & \aula19\\
+                    22 & \aula23 & 24 & 25 & \prova26\\
+                    29 & \aula30   &    &    &   \\
+                    \hline
+                \end{tblr}
+            \end{table}
+        \end{column}
+        
+        \begin{column}{0.7\textwidth}
+            \begin{itemize}
+                \justifying
+                \item Apresentação da disciplina.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Calendário}
+    \centering
+    \begin{tblr}{c c c}
+        \aula AULA & \feriado FERIADO & \prova AVALIAÇÃO
+    \end{tblr}
+    
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \begin{table}
+                \centering
+                \textbf{SETEMBRO}\\ \vspace{0.15cm}
+                \begin{tblr}{Q[c,m] Q[c,m] Q[c,m] Q[c,m] Q[c,m]}
+                    \hline
+                    \textbf{S} & \textbf{T} & \textbf{Q} & \textbf{Q} & \textbf{S} \\
+                    \hline
+                    01 & 02 & 03 & 04 & \aula05\\
+                    08 & \aula\esta{09} & 10 & 11 & \aula12\\
+                    15 & \aula16 & 17 & 18 & \aula19\\
+                    22 & \aula23 & 24 & 25 & \prova26\\
+                    29 & \aula30   &    &    &   \\
+                    \hline
+                \end{tblr}
+            \end{table}
+        \end{column}
+        
+        \begin{column}{0.7\textwidth}
+            \begin{itemize}
+                \justifying
+                \item Fundamentos do JavaFX.
+                \item Modelo de eventos e propriedades.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Calendário}
+    \centering
+    \begin{tblr}{c c c}
+        \aula AULA & \feriado FERIADO & \prova AVALIAÇÃO
+    \end{tblr}
+    
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \begin{table}
+                \centering
+                \textbf{SETEMBRO}\\ \vspace{0.15cm}
+                \begin{tblr}{Q[c,m] Q[c,m] Q[c,m] Q[c,m] Q[c,m]}
+                    \hline
+                    \textbf{S} & \textbf{T} & \textbf{Q} & \textbf{Q} & \textbf{S} \\
+                    \hline
+                    01 & 02 & 03 & 04 & \aula05\\
+                    08 & \aula09 & 10 & 11 & \aula\esta{12}\\
+                    15 & \aula16 & 17 & 18 & \aula19\\
+                    22 & \aula23 & 24 & 25 & \prova26\\
+                    29 & \aula30   &    &    &   \\
+                    \hline
+                \end{tblr}
+            \end{table}
+        \end{column}
+        
+        \begin{column}{0.7\textwidth}
+            \begin{itemize}
+                \justifying
+                \item Layouts.
+                \item Controles básicos.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Calendário}
+    \centering
+    \begin{tblr}{c c c}
+        \aula AULA & \feriado FERIADO & \prova AVALIAÇÃO
+    \end{tblr}
+    
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \begin{table}
+                \centering
+                \textbf{SETEMBRO}\\ \vspace{0.15cm}
+                \begin{tblr}{Q[c,m] Q[c,m] Q[c,m] Q[c,m] Q[c,m]}
+                    \hline
+                    \textbf{S} & \textbf{T} & \textbf{Q} & \textbf{Q} & \textbf{S} \\
+                    \hline
+                    01 & 02 & 03 & 04 & \aula05\\
+                    08 & \aula09 & 10 & 11 & \aula12\\
+                    15 & \aula\esta{16} & 17 & 18 & \aula19\\
+                    22 & \aula23 & 24 & 25 & \prova26\\
+                    29 & \aula30   &    &    &   \\
+                    \hline
+                \end{tblr}
+            \end{table}
+        \end{column}
+        
+        \begin{column}{0.7\textwidth}
+            \begin{itemize}
+                \justifying
+                \item Listas e tabelas.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Calendário}
+    \centering
+    \begin{tblr}{c c c}
+        \aula AULA & \feriado FERIADO & \prova AVALIAÇÃO
+    \end{tblr}
+    
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \begin{table}
+                \centering
+                \textbf{SETEMBRO}\\ \vspace{0.15cm}
+                \begin{tblr}{Q[c,m] Q[c,m] Q[c,m] Q[c,m] Q[c,m]}
+                    \hline
+                    \textbf{S} & \textbf{T} & \textbf{Q} & \textbf{Q} & \textbf{S} \\
+                    \hline
+                    01 & 02 & 03 & 04 & \aula05\\
+                    08 & \aula09 & 10 & 11 & \aula12\\
+                    15 & \aula16 & 17 & 18 & \aula\esta{19}\\
+                    22 & \aula23 & 24 & 25 & \prova26\\
+                    29 & \aula30   &    &    &   \\
+                    \hline
+                \end{tblr}
+            \end{table}
+        \end{column}
+        
+        \begin{column}{0.7\textwidth}
+            \begin{itemize}
+                \justifying
+                \item Validação e feedback.
+                \item Menus, toolbars e atalhos.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Calendário}
+    \centering
+    \begin{tblr}{c c c}
+        \aula AULA & \feriado FERIADO & \prova AVALIAÇÃO
+    \end{tblr}
+    
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \begin{table}
+                \centering
+                \textbf{SETEMBRO}\\ \vspace{0.15cm}
+                \begin{tblr}{Q[c,m] Q[c,m] Q[c,m] Q[c,m] Q[c,m]}
+                    \hline
+                    \textbf{S} & \textbf{T} & \textbf{Q} & \textbf{Q} & \textbf{S} \\
+                    \hline
+                    01 & 02 & 03 & 04 & \aula05\\
+                    08 & \aula09 & 10 & 11 & \aula12\\
+                    15 & \aula16 & 17 & 18 & \aula19\\
+                    22 & \aula\esta{23} & 24 & 25 & \prova26\\
+                    29 & \aula30   &    &    &   \\
+                    \hline
+                \end{tblr}
+            \end{table}
+        \end{column}
+        
+        \begin{column}{0.7\textwidth}
+            \begin{itemize}
+                \justifying
+                \item Organização de telas e navegação.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Calendário}
+    \centering
+    \begin{tblr}{c c c}
+        \aula AULA & \feriado FERIADO & \prova AVALIAÇÃO
+    \end{tblr}
+    
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \begin{table}
+                \centering
+                \textbf{SETEMBRO}\\ \vspace{0.15cm}
+                \begin{tblr}{Q[c,m] Q[c,m] Q[c,m] Q[c,m] Q[c,m]}
+                    \hline
+                    \textbf{S} & \textbf{T} & \textbf{Q} & \textbf{Q} & \textbf{S} \\
+                    \hline
+                    01 & 02 & 03 & 04 & \aula05\\
+                    08 & \aula09 & 10 & 11 & \aula12\\
+                    15 & \aula16 & 17 & 18 & \aula19\\
+                    22 & \aula23 & 24 & 25 & \prova\esta{26}\\
+                    29 & \aula30   &    &    &   \\
+                    \hline
+                \end{tblr}
+            \end{table}
+        \end{column}
+        
+        \begin{column}{0.7\textwidth}
+            \Large\centering Primeira Avaliação
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Calendário}
+    \centering
+    \begin{tblr}{c c c}
+        \aula AULA & \feriado FERIADO & \prova AVALIAÇÃO
+    \end{tblr}
+    
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \begin{table}
+                \centering
+                \textbf{SETEMBRO}\\ \vspace{0.15cm}
+                \begin{tblr}{Q[c,m] Q[c,m] Q[c,m] Q[c,m] Q[c,m]}
+                    \hline
+                    \textbf{S} & \textbf{T} & \textbf{Q} & \textbf{Q} & \textbf{S} \\
+                    \hline
+                    01 & 02 & 03 & 04 & \aula05\\
+                    08 & \aula09 & 10 & 11 & \aula12\\
+                    15 & \aula16 & 17 & 18 & \aula19\\
+                    22 & \aula23 & 24 & 25 & \prova26\\
+                    29 & \aula\esta{30}   &    &    &   \\
+                    \hline
+                \end{tblr}
+            \end{table}
+        \end{column}
+        
+        \begin{column}{0.7\textwidth}
+            \begin{itemize}
+                \justifying
+                \item Arquivos de texto simples.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Calendário}
+    \centering
+    \begin{tblr}{c c c}
+        \aula AULA & \feriado FERIADO & \prova AVALIAÇÃO
+    \end{tblr}
+    
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \begin{table}
+                \centering
+                \textbf{OUTUBRO}\\ \vspace{0.15cm}
+                \begin{tblr}{Q[c,m] Q[c,m] Q[c,m] Q[c,m] Q[c,m]}
+                    \hline
+                    \textbf{S} & \textbf{T} & \textbf{Q} & \textbf{Q} & \textbf{S} \\
+                    \hline
+                    &  & 01 & 02 & \aula\esta{03}\\
+                    06 & \aula07 & 08 & 09 & \aula10\\
+                    13 & \aula14 & \feriado15 & 16 & \aula17\\
+                    20 & \aula21 & 22 & 23 & \aula24\\
+                    27 & \aula28 & 29 & 30 & \prova31\\
+                    \hline
+                \end{tblr}
+            \end{table}
+        \end{column}
+        
+        \begin{column}{0.7\textwidth}
+            \begin{itemize}
+                \justifying
+                \item Threads em Java.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Calendário}
+    \centering
+    \begin{tblr}{c c c}
+        \aula AULA & \feriado FERIADO & \prova AVALIAÇÃO
+    \end{tblr}
+    
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \begin{table}
+                \centering
+                \textbf{OUTUBRO}\\ \vspace{0.15cm}
+                \begin{tblr}{Q[c,m] Q[c,m] Q[c,m] Q[c,m] Q[c,m]}
+                    \hline
+                    \textbf{S} & \textbf{T} & \textbf{Q} & \textbf{Q} & \textbf{S} \\
+                    \hline
+                    &  & 01 & 02 & \aula03\\
+                    06 & \aula\esta{07} & 08 & 09 & \aula10\\
+                    13 & \aula14 & \feriado15 & 16 & \aula17\\
+                    20 & \aula21 & 22 & 23 & \aula24\\
+                    27 & \aula28 & 29 & 30 & \prova31\\
+                    \hline
+                \end{tblr}
+            \end{table}
+        \end{column}
+        
+        \begin{column}{0.7\textwidth}
+            \begin{itemize}
+                \justifying
+                \item Salvando dados de formulários em arquivos.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Calendário}
+    \centering
+    \begin{tblr}{c c c}
+        \aula AULA & \feriado FERIADO & \prova AVALIAÇÃO
+    \end{tblr}
+    
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \begin{table}
+                \centering
+                \textbf{OUTUBRO}\\ \vspace{0.15cm}
+                \begin{tblr}{Q[c,m] Q[c,m] Q[c,m] Q[c,m] Q[c,m]}
+                    \hline
+                    \textbf{S} & \textbf{T} & \textbf{Q} & \textbf{Q} & \textbf{S} \\
+                    \hline
+                    &  & 01 & 02 & \aula03\\
+                    06 & \aula07 & 08 & 09 & \aula\esta{10}\\
+                    13 & \aula14 & \feriado15 & 16 & \aula17\\
+                    20 & \aula21 & 22 & 23 & \aula24\\
+                    27 & \aula28 & 29 & 30 & \prova31\\
+                    \hline
+                \end{tblr}
+            \end{table}
+        \end{column}
+        
+        \begin{column}{0.7\textwidth}
+            \begin{itemize}
+                \justifying
+                \item Importar/exportar dados em CSV.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Calendário}
+    \centering
+    \begin{tblr}{c c c}
+        \aula AULA & \feriado FERIADO & \prova AVALIAÇÃO
+    \end{tblr}
+    
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \begin{table}
+                \centering
+                \textbf{OUTUBRO}\\ \vspace{0.15cm}
+                \begin{tblr}{Q[c,m] Q[c,m] Q[c,m] Q[c,m] Q[c,m]}
+                    \hline
+                    \textbf{S} & \textbf{T} & \textbf{Q} & \textbf{Q} & \textbf{S} \\
+                    \hline
+                    &  & 01 & 02 & \aula03\\
+                    06 & \aula07 & 08 & 09 & \aula10\\
+                    13 & \aula\esta{14} & \feriado15 & 16 & \aula17\\
+                    20 & \aula21 & 22 & 23 & \aula24\\
+                    27 & \aula28 & 29 & 30 & \prova31\\
+                    \hline
+                \end{tblr}
+            \end{table}
+        \end{column}
+        
+        \begin{column}{0.7\textwidth}
+            \begin{itemize}
+                \justifying
+                \item Leitura de arquivo para análise.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Calendário}
+    \centering
+    \begin{tblr}{c c c}
+        \aula AULA & \feriado FERIADO & \prova AVALIAÇÃO
+    \end{tblr}
+    
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \begin{table}
+                \centering
+                \textbf{OUTUBRO}\\ \vspace{0.15cm}
+                \begin{tblr}{Q[c,m] Q[c,m] Q[c,m] Q[c,m] Q[c,m]}
+                    \hline
+                    \textbf{S} & \textbf{T} & \textbf{Q} & \textbf{Q} & \textbf{S} \\
+                    \hline
+                    &  & 01 & 02 & \aula03\\
+                    06 & \aula07 & 08 & 09 & \aula10\\
+                    13 & \aula14 & \feriado15 & 16 & \aula\esta{17}\\
+                    20 & \aula21 & 22 & 23 & \aula24\\
+                    27 & \aula28 & 29 & 30 & \prova31\\
+                    \hline
+                \end{tblr}
+            \end{table}
+        \end{column}
+        
+        \begin{column}{0.7\textwidth}
+            \begin{itemize}
+                \justifying
+                \item Serialização de objetos.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Calendário}
+    \centering
+    \begin{tblr}{c c c}
+        \aula AULA & \feriado FERIADO & \prova AVALIAÇÃO
+    \end{tblr}
+    
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \begin{table}
+                \centering
+                \textbf{OUTUBRO}\\ \vspace{0.15cm}
+                \begin{tblr}{Q[c,m] Q[c,m] Q[c,m] Q[c,m] Q[c,m]}
+                    \hline
+                    \textbf{S} & \textbf{T} & \textbf{Q} & \textbf{Q} & \textbf{S} \\
+                    \hline
+                    &  & 01 & 02 & \aula03\\
+                    06 & \aula07 & 08 & 09 & \aula10\\
+                    13 & \aula14 & \feriado15 & 16 & \aula17\\
+                    20 & \aula\esta{21} & 22 & 23 & \aula24\\
+                    27 & \aula28 & 29 & 30 & \prova31\\
+                    \hline
+                \end{tblr}
+            \end{table}
+        \end{column}
+        
+        \begin{column}{0.7\textwidth}
+            \begin{itemize}
+                \justifying
+                \item Threads simulando tarefas demoradas.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Calendário}
+    \centering
+    \begin{tblr}{c c c}
+        \aula AULA & \feriado FERIADO & \prova AVALIAÇÃO
+    \end{tblr}
+    
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \begin{table}
+                \centering
+                \textbf{OUTUBRO}\\ \vspace{0.15cm}
+                \begin{tblr}{Q[c,m] Q[c,m] Q[c,m] Q[c,m] Q[c,m]}
+                    \hline
+                    \textbf{S} & \textbf{T} & \textbf{Q} & \textbf{Q} & \textbf{S} \\
+                    \hline
+                    &  & 01 & 02 & \aula03\\
+                    06 & \aula07 & 08 & 09 & \aula10\\
+                    13 & \aula14 & \feriado15 & 16 & \aula17\\
+                    20 & \aula21 & 22 & 23 & \aula\esta{24}\\
+                    27 & \aula28 & 29 & 30 & \prova31\\
+                    \hline
+                \end{tblr}
+            \end{table}
+        \end{column}
+        
+        \begin{column}{0.7\textwidth}
+            \begin{itemize}
+                \justifying
+                \item Uso de \texttt{Task} e \texttt{Service} no JavaFX.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Calendário}
+    \centering
+    \begin{tblr}{c c c}
+        \aula AULA & \feriado FERIADO & \prova AVALIAÇÃO
+    \end{tblr}
+    
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \begin{table}
+                \centering
+                \textbf{OUTUBRO}\\ \vspace{0.15cm}
+                \begin{tblr}{Q[c,m] Q[c,m] Q[c,m] Q[c,m] Q[c,m]}
+                    \hline
+                    \textbf{S} & \textbf{T} & \textbf{Q} & \textbf{Q} & \textbf{S} \\
+                    \hline
+                    &  & 01 & 02 & \aula03\\
+                    06 & \aula07 & 08 & 09 & \aula10\\
+                    13 & \aula14 & \feriado15 & 16 & \aula17\\
+                    20 & \aula21 & 22 & 23 & \aula24\\
+                    27 & \aula\esta{28} & 29 & 30 & \prova31\\
+                    \hline
+                \end{tblr}
+            \end{table}
+        \end{column}
+        
+        \begin{column}{0.7\textwidth}
+            \begin{itemize}
+                \justifying
+                \item Prática.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Calendário}
+    \centering
+    \begin{tblr}{c c c}
+        \aula AULA & \feriado FERIADO & \prova AVALIAÇÃO
+    \end{tblr}
+    
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \begin{table}
+                \centering
+                \textbf{OUTUBRO}\\ \vspace{0.15cm}
+                \begin{tblr}{Q[c,m] Q[c,m] Q[c,m] Q[c,m] Q[c,m]}
+                    \hline
+                    \textbf{S} & \textbf{T} & \textbf{Q} & \textbf{Q} & \textbf{S} \\
+                    \hline
+                    &  & 01 & 02 & \aula03\\
+                    06 & \aula07 & 08 & 09 & \aula10\\
+                    13 & \aula14 & \feriado15 & 16 & \aula17\\
+                    20 & \aula21 & 22 & 23 & \aula24\\
+                    27 & \aula28 & 29 & 30 & \prova\esta{31}\\
+                    \hline
+                \end{tblr}
+            \end{table}
+        \end{column}
+        
+        \begin{column}{0.7\textwidth}
+            \Large\centering Segunda Avaliação
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Calendário}
+    \centering
+    \begin{tblr}{c c c}
+        \aula AULA & \feriado FERIADO & \prova AVALIAÇÃO
+    \end{tblr}
+    
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \begin{table}
+                \centering
+                \textbf{NOVEMBRO}\\ \vspace{0.15cm}
+                \begin{tblr}{Q[c,m] Q[c,m] Q[c,m] Q[c,m] Q[c,m]}
+                    \hline
+                    \textbf{S} & \textbf{T} & \textbf{Q} & \textbf{Q} & \textbf{S} \\
+                    \hline
+                    03 & \aula\esta{04} & 05 & 06 & \aula07\\
+                    10 & \aula11 & 12 & 13 & \aula14\\
+                    17 & \aula18 & 19 & \feriado20 & \aula21\\
+                    24 & \aula25 & 26 & 27 & \aula28\\
+                    \hline
+                \end{tblr}
+            \end{table}
+        \end{column}
+        
+        \begin{column}{0.7\textwidth}
+            \begin{itemize}
+                \justifying
+                \item Noções básicas de rede.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Calendário}
+    \centering
+    \begin{tblr}{c c c}
+        \aula AULA & \feriado FERIADO & \prova AVALIAÇÃO
+    \end{tblr}
+    
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \begin{table}
+                \centering
+                \textbf{NOVEMBRO}\\ \vspace{0.15cm}
+                \begin{tblr}{Q[c,m] Q[c,m] Q[c,m] Q[c,m] Q[c,m]}
+                    \hline
+                    \textbf{S} & \textbf{T} & \textbf{Q} & \textbf{Q} & \textbf{S} \\
+                    \hline
+                    03 & \aula04 & 05 & 06 & \aula\esta{07}\\
+                    10 & \aula11 & 12 & 13 & \aula14\\
+                    17 & \aula18 & 19 & \feriado20 & \aula21\\
+                    24 & \aula25 & 26 & 27 & \aula28\\
+                    \hline
+                \end{tblr}
+            \end{table}
+        \end{column}
+        
+        \begin{column}{0.7\textwidth}
+            \begin{itemize}
+                \justifying
+                \item JDBC.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Calendário}
+    \centering
+    \begin{tblr}{c c c}
+        \aula AULA & \feriado FERIADO & \prova AVALIAÇÃO
+    \end{tblr}
+    
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \begin{table}
+                \centering
+                \textbf{NOVEMBRO}\\ \vspace{0.15cm}
+                \begin{tblr}{Q[c,m] Q[c,m] Q[c,m] Q[c,m] Q[c,m]}
+                    \hline
+                    \textbf{S} & \textbf{T} & \textbf{Q} & \textbf{Q} & \textbf{S} \\
+                    \hline
+                    03 & \aula04 & 05 & 06 & \aula07\\
+                    10 & \aula\esta{11} & 12 & 13 & \aula14\\
+                    17 & \aula18 & 19 & \feriado20 & \aula21\\
+                    24 & \aula25 & 26 & 27 & \aula28\\
+                    \hline
+                \end{tblr}
+            \end{table}
+        \end{column}
+        
+        \begin{column}{0.7\textwidth}
+            \begin{itemize}
+                \justifying
+                \item Cliente TCP simples em JavaFX.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Calendário}
+    \centering
+    \begin{tblr}{c c c}
+        \aula AULA & \feriado FERIADO & \prova AVALIAÇÃO
+    \end{tblr}
+    
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \begin{table}
+                \centering
+                \textbf{NOVEMBRO}\\ \vspace{0.15cm}
+                \begin{tblr}{Q[c,m] Q[c,m] Q[c,m] Q[c,m] Q[c,m]}
+                    \hline
+                    \textbf{S} & \textbf{T} & \textbf{Q} & \textbf{Q} & \textbf{S} \\
+                    \hline
+                    03 & \aula04 & 05 & 06 & \aula07\\
+                    10 & \aula11 & 12 & 13 & \aula\esta{14}\\
+                    17 & \aula18 & 19 & \feriado20 & \aula21\\
+                    24 & \aula25 & 26 & 27 & \aula28\\
+                    \hline
+                \end{tblr}
+            \end{table}
+        \end{column}
+        
+        \begin{column}{0.7\textwidth}
+            \begin{itemize}
+                \justifying
+                \item Servidor TCP simples.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Calendário}
+    \centering
+    \begin{tblr}{c c c}
+        \aula AULA & \feriado FERIADO & \prova AVALIAÇÃO
+    \end{tblr}
+    
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \begin{table}
+                \centering
+                \textbf{NOVEMBRO}\\ \vspace{0.15cm}
+                \begin{tblr}{Q[c,m] Q[c,m] Q[c,m] Q[c,m] Q[c,m]}
+                    \hline
+                    \textbf{S} & \textbf{T} & \textbf{Q} & \textbf{Q} & \textbf{S} \\
+                    \hline
+                    03 & \aula04 & 05 & 06 & \aula07\\
+                    10 & \aula11 & 12 & 13 & \aula14\\
+                    17 & \aula\esta{18} & 19 & \feriado20 & \aula21\\
+                    24 & \aula25 & 26 & 27 & \aula28\\
+                    \hline
+                \end{tblr}
+            \end{table}
+        \end{column}
+        
+        \begin{column}{0.7\textwidth}
+            \begin{itemize}
+                \justifying
+                \item Conexão SQLite com JDBC em JavaFX.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Calendário}
+    \centering
+    \begin{tblr}{c c c}
+        \aula AULA & \feriado FERIADO & \prova AVALIAÇÃO
+    \end{tblr}
+    
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \begin{table}
+                \centering
+                \textbf{NOVEMBRO}\\ \vspace{0.15cm}
+                \begin{tblr}{Q[c,m] Q[c,m] Q[c,m] Q[c,m] Q[c,m]}
+                    \hline
+                    \textbf{S} & \textbf{T} & \textbf{Q} & \textbf{Q} & \textbf{S} \\
+                    \hline
+                    03 & \aula04 & 05 & 06 & \aula07\\
+                    10 & \aula11 & 12 & 13 & \aula14\\
+                    17 & \aula18 & 19 & \feriado20 & \aula\esta{21}\\
+                    24 & \aula25 & 26 & 27 & \aula28\\
+                    \hline
+                \end{tblr}
+            \end{table}
+        \end{column}
+        
+        \begin{column}{0.7\textwidth}
+            \begin{itemize}
+                \justifying
+                \item Inserção de registros no banco via GUI.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Calendário}
+    \centering
+    \begin{tblr}{c c c}
+        \aula AULA & \feriado FERIADO & \prova AVALIAÇÃO
+    \end{tblr}
+    
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \begin{table}
+                \centering
+                \textbf{NOVEMBRO}\\ \vspace{0.15cm}
+                \begin{tblr}{Q[c,m] Q[c,m] Q[c,m] Q[c,m] Q[c,m]}
+                    \hline
+                    \textbf{S} & \textbf{T} & \textbf{Q} & \textbf{Q} & \textbf{S} \\
+                    \hline
+                    03 & \aula04 & 05 & 06 & \aula07\\
+                    10 & \aula11 & 12 & 13 & \aula14\\
+                    17 & \aula18 & 19 & \feriado20 & \aula21\\
+                    24 & \aula\esta{25} & 26 & 27 & \aula28\\
+                    \hline
+                \end{tblr}
+            \end{table}
+        \end{column}
+        
+        \begin{column}{0.7\textwidth}
+            \begin{itemize}
+                \justifying
+                \item Atualização e exclusão de registros via GUI.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Calendário}
+    \centering
+    \begin{tblr}{c c c}
+        \aula AULA & \feriado FERIADO & \prova AVALIAÇÃO
+    \end{tblr}
+    
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \begin{table}
+                \centering
+                \textbf{NOVEMBRO}\\ \vspace{0.15cm}
+                \begin{tblr}{Q[c,m] Q[c,m] Q[c,m] Q[c,m] Q[c,m]}
+                    \hline
+                    \textbf{S} & \textbf{T} & \textbf{Q} & \textbf{Q} & \textbf{S} \\
+                    \hline
+                    03 & \aula04 & 05 & 06 & \aula07\\
+                    10 & \aula11 & 12 & 13 & \aula14\\
+                    17 & \aula18 & 19 & \feriado20 & \aula21\\
+                    24 & \aula25 & 26 & 27 & \aula\esta{28}\\
+                    \hline
+                \end{tblr}
+            \end{table}
+        \end{column}
+        
+        \begin{column}{0.7\textwidth}
+            \begin{itemize}
+                \justifying
+                \item Integração GUI + Banco + Rede.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Calendário}
+    \centering
+    \begin{tblr}{c c c}
+        \aula AULA & \feriado FERIADO & \prova AVALIAÇÃO
+    \end{tblr}
+    
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \begin{table}
+                \centering
+                \textbf{DEZEMBRO}\\ \vspace{0.15cm}
+                \begin{tblr}{Q[c,m] Q[c,m] Q[c,m] Q[c,m] Q[c,m]}
+                    \hline
+                    \textbf{S} & \textbf{T} & \textbf{Q} & \textbf{Q} & \textbf{S} \\
+                    \hline
+                    01 & \aula\esta{02} & 03 & 04 & \prova05\\
+                    08 & \prova09 & 10 & 11 & \feriado12\\
+                    15 & 16 & 17 & 18 & 19\\
+                    22 & 23 & 24 & 25 & 26\\
+                    29 & 30 & 31 &    &   \\
+                    \hline
+                \end{tblr}
+            \end{table}
+        \end{column}
+        
+        \begin{column}{0.7\textwidth}
+            \begin{itemize}
+                \item Prática.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Calendário}
+    \centering
+    \begin{tblr}{c c c}
+        \aula AULA & \feriado FERIADO & \prova AVALIAÇÃO
+    \end{tblr}
+    
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \begin{table}
+                \centering
+                \textbf{DEZEMBRO}\\ \vspace{0.15cm}
+                \begin{tblr}{Q[c,m] Q[c,m] Q[c,m] Q[c,m] Q[c,m]}
+                    \hline
+                    \textbf{S} & \textbf{T} & \textbf{Q} & \textbf{Q} & \textbf{S} \\
+                    \hline
+                    01 & \aula02 & 03 & 04 & \prova\esta{05}\\
+                    08 & \prova09 & 10 & 11 & \feriado12\\
+                    15 & 16 & 17 & 18 & 19\\
+                    22 & 23 & 24 & 25 & 26\\
+                    29 & 30 & 31 &    &   \\
+                    \hline
+                \end{tblr}
+            \end{table}
+        \end{column}
+        
+        \begin{column}{0.7\textwidth}
+            \Large\centering Terceira Avaliação
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Calendário}
+    \centering
+    \begin{tblr}{c c c}
+        \aula AULA & \feriado FERIADO & \prova AVALIAÇÃO
+    \end{tblr}
+    
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \begin{table}
+                \centering
+                \textbf{DEZEMBRO}\\ \vspace{0.15cm}
+                \begin{tblr}{Q[c,m] Q[c,m] Q[c,m] Q[c,m] Q[c,m]}
+                    \hline
+                    \textbf{S} & \textbf{T} & \textbf{Q} & \textbf{Q} & \textbf{S} \\
+                    \hline
+                    01 & \aula02 & 03 & 04 & \prova05\\
+                    08 & \prova\esta{09} & 10 & 11 & \feriado12\\
+                    15 & 16 & 17 & 18 & 19\\
+                    22 & 23 & 24 & 25 & 26\\
+                    29 & 30 & 31 &    &   \\
+                    \hline
+                \end{tblr}
+            \end{table}
+        \end{column}
+        
+        \begin{column}{0.7\textwidth}
+            \Large\centering Avaliação Final
+        \end{column}
+    \end{columns}
+\end{frame}
+
+%===============================================================================
+% FIM ==========================================================================
+%===============================================================================
+
+\begin{frame}
+    \centering
+    \Large
+    FIM
+\end{frame}
+    
+\end{document}

@@ -1,0 +1,259 @@
+\documentclass[a4paper, 12pt]{article}
+%\documentclass[a4paper,12pt,openany]{memoir}
+
+\input{preambulo.tex}
+
+\title{\vspace{-2cm}\large\textbf{PLANO DE ENSINO}}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+%\vspace{-6em}
+\vspace{-2.5cm}
+    
+%-----------------------------------------------------------    
+\section{Identificação}
+    
+\begin{tblr}{vlines, hlines}
+    \SetCell[c=2]{wd=0.7\linewidth}Disciplina: Programação Orientada a Objetos II & & \SetCell{wd=0.25\linewidth}Créditos: 1.3.0 \\
+    \SetCell[c=2]{wd=0.7\linewidth}Carga horária: 60 horas & &  \SetCell{wd=0.25\linewidth}Período: 4\textordmasculine
+\end{tblr}
+
+%-----------------------------------------------------------
+\section{Ementa}
+
+\begin{itemize}
+    \item Interfaces e processamento de eventos.
+    \item Programação gráfica.
+    \item Manipulação de arquivos.
+    \item Programação concorrente usando Multithreading.
+    \item Programação em rede.
+    \item Conectividade com banco de dados: JDBC.
+\end{itemize}  
+
+%-----------------------------------------------------------
+\section{Objetivos}
+
+\begin{itemize}
+    \item Dominar componentes de UI, modelo de eventos e boas práticas (MVC/arquitetura de telas).
+    \item Ensinar a salvar, carregar e processar dados de forma simples, e dar noções básicas de execução em paralelo.
+    \item Introduzir conceitos básicos de comunicação e persistência.
+\end{itemize}
+
+\newpage
+%-----------------------------------------------------------
+\section{Conteúdo Programático}
+
+\DeclareTblrTemplate{conthead-text}{default}{ (Continuação)}
+\DeclareTblrTemplate{contfoot-text}{default}{Continua na próxima página}
+\DeclareTblrTemplate{caption-text}{default}{Conteúdo Programático}
+\begin{longtblr}{colspec = {Q[l, 0.8\textwidth] X[c]},
+        row{1} = {font=\bfseries, m},
+        cells = {m},
+        hlines, vlines
+        }
+    Conteúdo & Carga Horária\\
+    \begin{itemize}
+        \item Interfaces, Eventos e Programação Gráfica (Swing)
+            \begin{itemize}
+                \item \textbf{Fundamentos de GUI em Java (JFC/Swing)}: containers, ciclo de vida.
+                \item \textbf{Modelo de eventos}: listeners, adapters, Action vs Key/Mouse, Timer.
+                \item \textbf{Layouts} (BorderLayout, FlowLayout, GridLayout, BoxLayout) e \textbf{nesting}.
+                \item \textbf{Componentes essenciais}: JLabel, JButton, JTextField/Area, JCheckBox, JRadioButton, JComboBox.
+                \item \textbf{Tabelas e listas}: JTable, ListModel/TableModel, renderers.
+                \item \textbf{Validação e feedback}: InputVerifier, DocumentFilter, diálogos (JOptionPane, JDialog).
+                \item \textbf{Menus}, \textbf{barras de ferramentas} e \textbf{atalhos} (JMenuBar, actions, key bindings).
+                \item \textbf{Arquitetura de telas}: MVC/MVP, separação de camadas, navegação.
+            \end{itemize}
+        \item Avaliação 1
+    \end{itemize} & 20\\
+    \begin{itemize}
+        \item Arquivos e Multithreading
+            \begin{itemize}
+                \item \textbf{Arquivos de texto}: leitura/escrita com \texttt{FileReader}, \texttt{BufferedReader}, \texttt{PrintWriter}.
+                \item \textbf{Threads em Java}: criar e iniciar uma \texttt{Thread}, diferença entre executar em série e em paralelo.
+                \item Ler e gravar dados de usuários em arquivo (cadastro simples).
+                \item Ler e escrever arquivos CSV (usando \texttt{split}).
+                \item Ler um arquivo linha a linha e processar dados (contagem de palavras, caracteres).
+                \item Uso básico de serialização (\texttt{ObjectOutputStream} / \texttt{ObjectInputStream}).
+                \item Threads com \texttt{Runnable}: executar uma tarefa em paralelo.
+                \item Threads para simular operações demoradas (ex: cálculo de primos, espera com \texttt{sleep}).
+            \end{itemize}
+        \item Avaliação 2
+    \end{itemize} & 20\\
+    \begin{itemize}
+        \item Programação em Rede e Bancos de Dados
+            \begin{itemize}
+                \item \textbf{Noções de rede}: o que é cliente e servidor, exemplos do dia a dia (navegador $\leftrightarrow$ site, WhatsApp).
+                \item \textbf{JDBC de forma simples}: conectar ao banco, rodar SELECT e INSERT básicos.
+                \item Criar um cliente TCP que envia uma mensagem a um servidor e recebe resposta.
+                \item Criar um servidor TCP que responde a vários clientes (um de cada vez, sem threads complexas).
+                \item Consultar e exibir dados de uma tabela em SQLite usando JDBC.
+                \item Inserir dados no banco via programa Java.
+                \item Atualizar e excluir dados no banco usando JDBC.
+                \item \textbf{Simular integração GUI + Banco}: formulário Swing que salva dados no SQLite.
+            \end{itemize}
+        \item Avaliação 3
+    \end{itemize} & 20\\
+\end{longtblr}
+
+%-----------------------------------------------------------
+\section{Procedimento de Ensino}
+
+O ensino desta disciplina se dará a partir de variados métodos, os quais incluem: 
+\begin{itemize}
+    \item Aula expositiva, com uso de \textit{slides} e códigos de exemplo;
+    \item Atividades práticas
+        \begin{itemize}
+            \item Trabalhos individuais ou em grupo;
+            \item Resolução de exercícios.
+        \end{itemize}
+\end{itemize}
+
+%-----------------------------------------------------------
+\section{Competências e Habilidades}
+
+\begin{itemize}
+    \item Competências
+        \begin{enumerate}
+            \item Compreensão dos conceitos avançados de POO
+                \begin{itemize}
+                    \item Diferenciar abstração de interface, classe abstrata e implementação.
+                    \item Entender o papel de eventos, concorrência e persistência em aplicações reais.
+                \end{itemize}
+            \item Capacidade de estruturar aplicações de médio porte
+                \begin{itemize}
+                    \item Projetar sistemas que integram GUI, persistência em arquivos/banco e comunicação em rede.
+                    \item Organizar código de forma modular e reutilizável.
+                \end{itemize}
+            \item Visão prática da programação profissional
+                \begin{itemize}
+                    \item Reconhecer os desafios de aplicações reais: responsividade, armazenamento, comunicação entre sistemas.
+                    \item Relacionar soluções acadêmicas com práticas do mercado (padrões de projeto simples, MVC, separação de camadas).
+                \end{itemize}
+            \item Pensamento crítico em desenvolvimento de software
+                \begin{itemize}
+                    \item Identificar problemas de design (como travamentos na UI, redundância de código, más práticas de persistência).
+                    \item Avaliar soluções alternativas e tomar decisões de implementação.
+                \end{itemize}
+        \end{enumerate}
+    \item Habilidades
+        \begin{enumerate}
+            \item Manipulação de interfaces gráficas e eventos
+                \begin{itemize}
+                    \item Criar telas interativas em Java usando Swing.
+                    \item Tratar eventos de usuário (cliques, teclas, menus).
+                    \item Aplicar padrões simples de arquitetura como MVC em GUIs.
+                \end{itemize}
+            \item Leitura e escrita de dados
+                \begin{itemize}
+                    \item Manipular arquivos de texto, CSV e objetos serializados.
+                    \item Persistir informações de programas em formato reutilizável.
+                \end{itemize}
+            \item Uso básico de threads
+                \begin{itemize}
+                    \item Criar e controlar múltiplas threads.
+                    \item Simular execução concorrente sem travar a aplicação.
+                \end{itemize}
+            \item Programação em rede
+                \begin{itemize}
+                    \item Implementar cliente e servidor TCP simples.
+                    \item Compreender noções básicas de protocolos de comunicação.
+                \end{itemize}
+            \item Integração com bancos de dados relacionais
+                \begin{itemize}
+                    \item Conectar aplicações Java a um banco via JDBC.
+                    \item Realizar operações CRUD (\textit{Create}, \textit{Read}, \textit{Update}, \textit{Delete}).
+                    \item Construir formulários que salvam e recuperam informações de forma persistente.
+                \end{itemize}
+            \item Desenvolvimento de projetos completos
+                \begin{itemize}
+                    \item Integrar GUI, persistência e rede em um sistema funcional.
+                    \item Testar, documentar e apresentar projetos de forma organizada.
+                \end{itemize}
+        \end{enumerate}
+\end{itemize}
+
+%-----------------------------------------------------------
+\section{Sistemática de Avaliação}
+
+Ao fim de cada unidade, será realizada uma avaliação parcial dos conteúdos ministrados durante o curso da unidade, totalizando em 03 (três) avaliações. A nota de cada avaliação poderá ser composta por um ou mais instrumentos de avaliação, de acordo com um dos seguintes casos: (1) Uma prova escrita; (2) um ou mais trabalhos (individuais ou em grupo); (3) Um ou mais trabalhos, mais uma prova escrita.
+
+Nos casos em que a avaliação for composta por mais de um instrumento, será realizado o somatório ou a média ponderada das notas obtidas em cada instrumento para compor a nota final de uma avaliação parcial. Os instrumentos a serem utilizados em cada avaliação serão definidos e informados no decorrer do curso.
+
+As notas obedecem a uma escala de 0,0 (zero) a 10,0 (dez), contando até a primeira ordem decimal com possíveis arredondamentos. Considerar-se-á aprovado na disciplina o aluno que obtiver assiduidade igual ou superior a 75\% e a média aritmética nas avaliações parciais (média parcial) igual ou superior a 7,0 (sete), ou que se submeta a exame final e obtenha média aritmética entre a média parcial e exame final (média final) igual ou superior a 6,0 (seis). Terá direito de realizar exame final o aluno que satisfaça os requisitos de assiduidade e que obtenha média parcial maior ou igual a 4,0 (quatro) e menor que 7,0 (sete).
+
+A seguir são apresentadas algumas normas, que regulamentam o rendimento escolar
+nos Cursos de Graduação da UFPI, aprovados pela resolução no 177/12 de 05/11/2012 do CEPEX/UFPI, atualizada em 03 de maio de 2023:
+
+\vspace{10pt}
+
+\noindent\textbf{Art. 100.} Entende-se por assiduidade do aluno a frequência às atividades didáticas (aulas teóricas e práticas e demais atividades exigidas em cada disciplina) programadas para o período letivo.
+
+\textbf{Parágrafo Único.} Não haverá abono de faltas, ressalvado os casos previstos em legislação específica.
+
+\noindent\textbf{Art. 105.} O professor deve discutir os resultados obtidos em cada instrumento de avaliação junto aos alunos.
+
+\textbf{Parágrafo único.} A discussão referida no caput deste artigo será realizada por ocasião da publicação dos resultados e o aluno terá vista dos instrumentos de avaliação, devendo devolvê-los após o fim da discussão.
+
+\noindent\textbf{Art. 108.} Impedido de participar de qualquer avaliação, o aluno tem direito de requerer a oportunidade de realizá-la em segunda chamada.
+
+\textbf{§ 1º} O aluno poderá requerer exame de segunda chamada por si ou por procurador legalmente constituído. O requerimento dirigido ao professor responsável pela disciplina, devidamente justificado e comprovado, deve ser protocolado à chefia do departamento ou curso a qual o componente curricular esteja vinculada, no prazo de 3 (três) dias úteis, contado este prazo a partir da data da avaliação não realizada.
+
+\textbf{§ 2º} Consideram-se motivos que justificam a ausência do aluno às verificações parciais ou ao exame final:
+\begin{enumerate}[label= \alph*)]
+    \item doença;
+    \item doença ou óbito de familiares diretos;
+    \item audiência judicial;
+    \item militares, policiais e outros profissionais em missão oficial;
+    \item participação em congressos, reuniões oficiais ou eventos culturais
+    representando a UFPI, o Município ou o Estado;
+    \item outros motivos que, apresentados, possam ser julgados procedentes.
+\end{enumerate}
+
+%-----------------------------------------------------------
+\section{Bibliografia}
+
+\subsection{Básica}
+
+\begin{itemize}
+    \item \textbf{Learn Java}. Disponível em <\url{https://dev.java/learn/}>. Acesso em 19 ago. 2025.
+    \item DOWNEY, Allen B.; MAYFIELD, Chris. \textbf{Think Java}. 2. ed., versão 7.1.0. Needham: Green Tea Press, 2020. Disponível em <\url{https://greenteapress.com/thinkjava7/thinkjava2.pdf}>. Acesso em 19 ago. 2025.
+    \item ECK, David J. \textbf{Introduction to Programming Using Java: Version 9.0, Swing Edition}. Disponível em <\url{https://math.hws.edu/javanotes-swing/}>. Acesso em 19 ago. 2025.
+    \item ECK, David J. \textbf{Introduction to Programming Using Java: Version 9.0, JavaFX Edition}. Disponível em <\url{https://math.hws.edu/javanotes/}>. Acesso em 19 ago. 2025.
+    \item BARNES, D. J., KÖLLING, M. \textbf{Programação Orientada a Objetos com Java: Uma introdução prática usando BLUEJ}. 4 ed. São Paulo: Pearson Prentice Hall, 2009.
+    \item DEITEL, H. M., DEITEL, P. J. \textbf{Java: Como programar}. 8 ed. São Paulo: Pearson Prentice Hall, 2010.
+    \item FREEMAN, E., FREEMAN, E. \textbf{Use a Cabeça Padrões de Projetos}. 2 ed. Rio de Janeiro: Altabooks, 2007.
+\end{itemize}
+
+\subsection{Complementar}
+
+\begin{itemize}
+    \item \textbf{Java Notes for Professionals}. Disponível em <\url{https://goalkicker.com/JavaBook/JavaNotesForProfessionals.pdf}>. Acesso em 19 ago. 2025.
+    \item \textbf{Introduction to JDBC}. Disponível em <\url{https://www.baeldung.com/java-jdbc}>. Acesso em 19 ago. 2025.
+    \item \textbf{Accessing data with MySQL}. Disponível em\\ <\url{https://spring.io/guides/gs/accessing-data-mysql}>. Acesso em 19 ago. 2025.
+    \item SIERRA, K.; BATES, B. \textbf{Use a Cabeça! Java}. 1 ed. Rio de Janeiro: AltaBooks, 2005.
+    \item HORSTMANN, C. S.; CORNELL, G. \textbf{Core Java 2: Fundamentos}. 7 ed. Rio de Janeiro: Alta Books, 2005.
+    \item KURNIAWAN, Budi. \textbf{Java para Web com Servlets, JSP e EJB}. 1 ed. Rio de Janeiro: Ciência Moderna, 2002.
+    \item CADENHEAD, Rogers; LEMAY, Laura. \textbf{Aprenda em 21 dias Java 2}. 4 ed. Rio de Janeiro: Elsevier, 2005.
+    \item HORSTMANN, C. \textbf{Big Java}. 4 ed. John Wiley e Sons, 2006.
+\end{itemize}
+
+
+\vfill
+%-----------------------------------------------------------
+% ASSINATURAS
+\begin{center}
+    \rule{6cm}{0.4pt} \\ 
+    \textbf{Evandro José da Rocha e Silva} \\
+    Professor(a) do Curso de Sistemas de Informação \\[1.5cm]
+    
+    \rule{6cm}{0.4pt} \\ 
+    \textbf{Frank César Lopes Véras} \\
+    Professor e Coordenador do Curso de Sistemas de Informação
+\end{center}
+    
+\end{document}
