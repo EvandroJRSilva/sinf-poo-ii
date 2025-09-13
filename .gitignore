@@ -1,4 +1,4 @@
-# Extensions
+# Extensões
 *.aux
 *.bcf
 *.log
@@ -7,4 +7,14 @@
 *.run.xml
 *.snm
 *.synctex.gz
+*.tex
 *.toc
+
+# Diretórios
+Plano\ de\ Ensino/
+Nova\ Apresentação/
+AULAS/Apresentação/imagens/
+
+# Arquivos
+AULAS/01/terde.py
+Documentos/mapa_SINF_CSHNB025_2025.2_01_.pdf
