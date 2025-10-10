@@ -2,3 +2,6 @@ fulano@cicrano.com
 fulano@cicrano.com
 fulano@cirano.com
 aaa@bbb.com
+a@b.com
+evandro.silva@ufpi.edu.br
+evandro-silva@ufpi.edu.br
