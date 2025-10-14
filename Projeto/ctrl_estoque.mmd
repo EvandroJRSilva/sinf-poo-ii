@@ -1,0 +1,103 @@
+erDiagram
+    FORNECEDOR ||--|| ENDERECO: localiza
+    FORNECEDOR ||--|{ MERCADORIA: tem
+    FORNECEDOR ||--|{ TRANSACAO_ESTOQUE: vende
+
+    TRANSACAO_ESTOQUE ||--|{ ITENS_TRANSACAO_ESTOQUE: inclui
+    TRANSACAO_CLIENTE ||--|{ ITENS_TRANSACAO_CLIENTE: inclui
+
+    ITENS_TRANSACAO_ESTOQUE ||--|{ MERCADORIA: possui
+    ITENS_TRANSACAO_CLIENTE ||--|{ MERCADORIA: possui
+
+    MERCADORIA }|--|| CATEGORIA: de
+    MERCADORIA }|--|| UNIDADE_MEDIDA: tem
+    MERCADORIA ||--|{ HISTORICO_PRECO: possui
+
+    ENDERECO }|--|| BAIRRO: de
+    BAIRRO }|--|| CIDADE: de
+    CIDADE }|--|| ESTADO: de
+    
+    FORNECEDOR{
+        string cnpj PK
+        string nome
+        Endereco endereco_id FK
+    }
+
+    MERCADORIA{
+        string codigo_barras PK
+        string nome
+        UM unidade_medida FK
+        CAT categoria FK
+    }
+
+    CATEGORIA{
+        int id PK
+        string nome
+    }
+
+    UNIDADE_MEDIDA{
+        int id PK
+        string nome
+    }
+
+    HISTORICO_PRECO{
+        int id PK
+        Mercadoria codigo_barras FK
+        date data
+    }
+
+    TRANSACAO_ESTOQUE{
+        string nota_fiscal PK
+        date data
+        Fornecedor fornecedor FK
+        float valor_total
+    }
+
+    ITENS_TRANSACAO_ESTOQUE{
+        int id PK
+        TE transacao FK
+        Mercadoria mercadoria FK
+        int quantidade
+        float preco_unitario
+        float subtotal
+    }
+
+    TRANSACAO_CLIENTE{
+        string nota_fiscal PK
+        date data
+        Cliente cliente FK
+        float valor_total
+    }
+
+    ITENS_TRANSACAO_CLIENTE{
+        int id PK
+        TC transacao_nf FK
+        Mercadoria mercadoria FK
+        int quantidade
+        float preco_unitario
+        floar subtotal
+    }
+
+    ENDERECO{
+        int id PK
+        string cep
+        string logradouro
+        Bairro bairro_id FK
+    }
+
+    BAIRRO{
+        int id PK
+        string nome
+        Cidade cidade_id FK
+    }
+
+    CIDADE{
+        int id PK
+        string nome
+        Estado estado_id FK
+    }
+
+    ESTADO{
+        int id PK
+        string nome
+    }

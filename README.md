@@ -12,8 +12,11 @@ POO II/
 │  ├─ 02/
 |  ├─ 03/
 |  ├─ 04/
-|  └─ 05/
+|  ├─ 05/
+|  └─ 06/
 ├─ Documentos/
+├─ Projeto/
+|  └─ src/
 ├─ .gitignore
 ├─ exercícios_av1.md
 └─ README.md
@@ -22,4 +25,4 @@ POO II/
 - **Documentos**: diretório para os documentos referentes à disciplina, como o Plano de Ensino.
 - **AULAS**: diretório para todos os arquivos referentes às aulas.
 
-O **Plano de Ensino** e a **Apresentação** da disciplina serão atualizados em breve, refletindo o novo planejamento.
+O **Plano de Ensino** e a **Apresentação** da disciplina serão atualizados para refletir o novo planejamento (de Java para Python).
