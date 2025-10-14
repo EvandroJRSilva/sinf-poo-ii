@@ -7,5 +7,10 @@ C++
 Rust
 Matlab
 SQL
-RCOBOL
+R
+COBOL
 C#
+DART
+Ruby
+Assembly
+Haskell
