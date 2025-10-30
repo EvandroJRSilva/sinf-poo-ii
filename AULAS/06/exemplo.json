@@ -1,0 +1,36 @@
+[
+    {
+        "nome" : "Trabalho de SO",
+        "membros" : [
+            {
+                "nome": "Rogers",
+                "especialidade": "Ser fiel demais"
+            },
+            {
+                "nome": "Tiago sem agá",
+                "especialidade": "Não perder o ônibus"
+            },
+            {
+                "nome": "Brenda Evelyn",
+                "especialidade": "Ser ruim em banco de dados"
+            }
+        ]
+    },
+    {
+        "nome" : "Trabalho de ED 2",
+        "membros" : [
+            {
+                "nome": "Rogers",
+                "especialidade": "Ser fiel demais"
+            },
+            {
+                "nome": "Tiago sem agá",
+                "especialidade": "Não perder o ônibus"
+            },
+            {
+                "nome": "Brenda Evelyn",
+                "especialidade": "Ser ruim em banco de dados"
+            }
+        ]
+    }
+]
