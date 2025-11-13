@@ -5,7 +5,8 @@ Sumário
 - [Aula 07](#aula-07)
   - [Comunicação entre processos](#comunicação-entre-processos)
   - [Módulo `socket`](#módulo-socket)
-    - [Exemplo](#exemplo)
+    - [Socket TCP](#socket-tcp)
+  - [Alternativas](#alternativas)
 
 
 ## Comunicação entre processos
@@ -61,75 +62,69 @@ A interface entre a **Camada de Aplicação** e a **Camada de Transporte** é ch
 
 O módulo [`socket`](https://docs.python.org/3.14/library/socket.html#module-socket) do `Python` fornece uma interface de baixo-nível para comunicação em redes.
 
-A criação de um objeto `socket` pode ser feito da seguinte forma:
+A função principal, usada para criar um objeto `socket`, é:
 
 ```python
-import socket
-
-s = socket.socket(family=AF_INET, type=SOCK_STREAM, proto=0, fileno=None)
+socket(family=AF_INET, type=SOCK_STREAM, proto=0, fileno=None)
 ```
 
-- Para mais informações sobre o parâmetro `family`, [clique aqui](https://docs.python.org/3.14/library/socket.html#socket-families). Os dois principais são `AF_INET` para IPv4 e `AF_INET6` para IPv6.
+- Os dois principais valores para `family` são `AF_INET` para IPv4 e `AF_INET6` para IPv6.
 - Os dois valores principais para `type` são `SOCK_STREAM`, que define o uso do protocolo de transporte TCP, e `SOCK_DGRAM` para o protocolo UDP.
 - Os outros dois parâmetros podem ser deixados com seus valores padrões. Só serão modificados em casos bastante específicos.
 
-Documentação de outras funções de [criação de socket](https://docs.python.org/3.14/library/socket.html#creating-sockets) e de [outros serviços](https://docs.python.org/3.14/library/socket.html#other-functions).
+Os métodos principais de um objeto `socket` são:
 
-Principais métodos de um objeto `socket`:
+- `bind(address)`: associa o `socket` com um `address`, uma tupla (*host*, *port*), ou seja, um nome de host ou endereço IP, e número de porta.
+- `listen([backlog])`: coloca o `socket` do servidor em modo de escuta, à espera de conexões de clientes. O `backlog` é opcional e define o tamanho de uma fila de conexões a serem aceitas.
+- `accept()`: aceita uma conexão de um cliente, retornando um novo objeto `socket` representando a conexão do cliente e seu endereço.
+- `connect(address)`: estabelece uma conexão com um servidor remoto especificado em `address`, uma tupla (*host*, *port*).
+- `connect_ex(address)`: similar ao `connect()`, porém retorna um indicador de erro em vez de lançar uma exceção para erros retornados pela chamada do método `connect()` no nível da linguagem `C`. É útil para conexões assíncronas.
+- `send(data)`: envia dados pelo `socket`. Os dados precisam ser codificados em bytes antes do envio, por exemplo, `data.encode('utf-8'))`.
+- `recv(buffer_size)`: recebe dados do `socket`. Retorna um objeto de bytes, o qual pode precisar ser decodificado para uma string, por exemplo, `data.decode('utf-8'))`
+- `close()`: encerra a conexão do `socket`.
 
-- ***Server-side***
-  - `bind(address)`: associa o `socket` com um `address`, uma tupla (*host*, *port*).
-  - `listen([backlog])`: coloca o `socket` do servidor em modo de escuta, à espera de conexões de clientes. O `backlog` é opcional e define o tamanho de uma fila de conexões a serem aceitas.
-  - `accept()`: aceita uma conexão de um cliente, retornando um novo objeto `socket` representando a conexão do cliente e seu endereço.
-- ***Client-side***
-  - `connect(address)`: estabelece uma conexão com um servidor remoto especificado em `address`, uma tupla (*host*, *port*).
-- **Transferência de dados**
-  - `send(data)`: envia dados pelo `socket`. Os dados precisam ser codificados em bytes antes do envio, por exemplo, `data.encode('utf-8'))`.
-  - `recv(buffer_size)`: recebe dados do `socket`. Retorna um objeto de bytes, o qual pode precisar ser decodificado para uma string, por exemplo, `data.decode('utf-8'))`
-- **Gerenciamento de conexão**
-  - `close()`: encerra a conexão do `socket`.
+### Socket TCP
 
-### Exemplo
+O **TCP** (*Transmition Control Protocol*), também referido como **Padrão 7** (*Standard*/*STD* 7) da Internet é definido nos seguintes RFCs: [761](https://datatracker.ietf.org/doc/rfc761/) $\rightarrow$ [793](https://datatracker.ietf.org/doc/rfc793/) $\rightarrow$ [9293](https://datatracker.ietf.org/doc/rfc9293/).
 
-**SERVIDOR**
+É orientado a conexão (ponto a ponto), confiável (garante que o segmento será entregue) e com entrega ordenada. Provê serviço ***full-duplex***, ou seja, os dados de remetente e destinatário podem fluir ao mesmo tempo.
 
-```python
-import socket
+A imagem a seguir mostra o fluxo de chamadas e dados de um `socket` TCP:
 
-HOST = '127.0.0.1'  # Standard loopback interface address (localhost)
-PORT = 65432        # Port to listen on (non-privileged ports are > 1023)
+<figure style="text-align: center;">
+    <img src="imagens/sockets-tcp-fluxo.png">
+    <figcaption>Fluxo do socket TCP (<a href="https://realpython.com/python-sockets/">Fonte da imagem</a>)</fifcaption>
+</figure>
 
-with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-    s.bind((HOST, PORT))
-    s.listen()
-    conn, addr = s.accept()
-    with conn:
-        print(f"Connected by {addr}")
-        while True:
-            data = conn.recv(1024)
-            if not data:
-                break
-            conn.sendall(data)
-```
+Exemplo: [echo-server](exemplo/echo-server.py) e [echo-client](exemplo/echo-client.py).
 
-**CLIENTE**
+Mais sobre `socket` com Python:
 
-```python
-import socket
+- [Real Python - Socket Programming in Python (Guide)](https://realpython.com/python-sockets/).
+- [Introdução a Sockets em Python](https://medium.com/@urapython.community/introdu%C3%A7%C3%A3o-a-sockets-em-python-44d3d55c60d0).
+- Documentação do módulo: [EN](https://docs.python.org/3.14/library/socket.html) | [PT-BR](https://docs.python.org/pt-br/3.14/library/socket.html#socket-objects).
+- Documentação [Socket Programming HOWTO](https://docs.python.org/3/howto/sockets.html) / [Programação de Soquetes](https://docs.python.org/pt-br/3/howto/sockets.html).
 
-HOST = '127.0.0.1'  # The server's hostname or IP address
-PORT = 65432        # The port used by the server
+## Alternativas
 
-with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-    s.connect((HOST, PORT))
-    s.sendall(b"Hello, world")
-    data = s.recv(1024)
+O exemplo visto serviu para mostrar, de forma simples, como fazer com uma conexão com um servidor via TCP. Contudo, não há necessidade de se debruçar sobre muitos detalhes dessa parte, a não ser que você esteja bastante curioso, ou precise ter controle dos detalhes em alguma aplicação que esteja sendo criada. Ou seja, isso será necessário em aplicações bastante nichadas.
 
-print(f"Received {data.decode('utf-8')}")
-```
+O mais comum em desenvolvimento que necessite de comunicação com algum servidor é utilizar algum `Web Framework`. Os três mais famosos do Python são:
 
-
-TODO: estudar os materiais a seguir
-    - https://realpython.com/python-sockets/
-    - https://medium.com/@urapython.community/introdu%C3%A7%C3%A3o-a-sockets-em-python-44d3d55c60d0
-    - https://docs.python.org/3/howto/sockets.html / https://docs.python.org/pt-br/3/howto/sockets.html
+- [`Flask`](https://flask.palletsprojects.com/en/stable/): consiste em um `Micro Web Framework` porque é muito básico. Por exemplo, ele não possui camada de abstração para banco de dados, validação de formulário, etc. Muitos componentes e recursos podem ser adicionados com o uso de bibliotecas de terceiros ou extensões, bibliotecas que funcionam como se tivessem sido implementadas no próprio `Flask`.
+- [`FastAPI`](https://fastapi.tiangolo.com/): consiste em um `Web Framework` moderno e rápido (alto-desempenho) para o desenvolvimento de APIs com Python. Suas principais características são:
+  - **Velocidade**: desempenho muito alto, em pé de igualdade com `NodeJS` e `Go`.
+  - **Rápido para programar**: aumenta a velocidade de desenvolvimento entre 200% a 300%.
+  - **Menos bugs**: reduz em cerca de 40% erros causados por humanos.
+  - **Intuitivo**: excelente suporte do editor; *completion* a rodo e menos tempo debugando.
+  - **Fácil**: projetado para ser fácil de usar e aprender, resultando em menos tempo lendo a documentação.
+  - **Curto**: minimiza duplicação de código, a partir de múltiplas funcionalidades de cada declaração de parâmetro, resultando em menos bugs.
+  - **Robusto**: retorna código pronto para produção, com documentação interativa automática.
+  - **Baseado em padrões**: baseado em (e totalmente compatível com) padrões abertos para APIs, como [OpenAPI](https://github.com/OAI/OpenAPI-Specification) e [JSON Schema](https://json-schema.org/).
+- [`Django`](https://www.djangoproject.com/): consiste em um `Web Framework` de alto nível que incentiva desenvolvimento rápido e design limpo e pragmático. Suas principais características são:
+  - **Ridiculamente rápido**: foi projetado para auxiliar aos desenvolvedores partirem da conceituação para uma aplicação completa, o mais rápido possível.
+  - **Completo**: inclui dezenas de recursos extras para lidar com tarefas de desenvolvimento web comuns. O Django cuida da autenticação de usuário, administração de conteúdo, mapa do site, feed RSS, e vários outros, no ponto de usar.
+  - **Tranquilizadoramente seguro**: leva a segurança a sério e ajuda os desenvolvedores a evitar muitos erros comuns de segurança, como `SQL Injection`, `Cross-Site Scripting`, `Cross-Site Request Forgery` e `Clickjacking`. Seu sistema de autenticação de usuário fornece um meio seguro de gerenciar contas e senhas.
+  - **Extremamente escalável**: alguns dos sites mais movimentados do mundo utilizam a capacidade do Django de escalar de forma rápida e flexível para atender às demanas de tráfego mais intensas.
+  - **Incrivelmente versátil**: Empresas, organizações e governos têm usado o Django para desenvolver tudo quanto é de aplicação, de sistemas de gerenciamento de conteúdo a redes sociais e plataformas de computação científica.
+  - De acordo com a [Wikipedia](https://en.wikipedia.org/wiki/Django_(web_framework)): *o objetivo principal do Djano é facilitar a criação de sites complexos e orientados a banco de dados*.
