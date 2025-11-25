@@ -1,0 +1,128 @@
+@startchen
+
+entity Atacadasso{
+  CNPJ <<key>>
+  Nome
+  Endereço{
+    Logradouro
+    Número
+    Complemento
+    Bairro
+    Cidade
+    Estado
+  }
+  Contato{
+    Telefone comercial
+    Email
+    Instagram
+    Facebook
+    LinkedIn
+    TikTok
+    X
+  }
+}
+
+entity Fornecedor{
+  CNPJ <<key>>
+  Nome
+  Endereço{
+    Logradouro
+    Número
+    Complemento
+    Bairro
+    Cidade
+    Estado
+  }
+  Contato{
+    Telefone comercial
+    Email
+    Instagram
+    Facebook
+    LinkedIn
+    TikTok
+    X
+  }
+}
+
+entity Mercadoria{
+  Código de barras <<key>>
+  Nome
+  Custo unitátio
+  Descrição
+  Categoria
+  Quantidade em estoque
+}
+
+entity PessoaFísica{
+  CPF <<key>>
+  Nome
+  Data de nascimento
+  Endereço{
+    Logradouro
+    Número
+    Complemento
+    Bairro
+    Cidade
+    Estado
+  }
+  Contato{
+    Telefone comercial
+    Email
+    Instagram
+    Facebook
+    LinkedIn
+    TikTok
+    X
+  }
+}
+
+entity Cliente{
+  id <<key>>
+  Fidelizado
+  Pontos
+}
+
+entity Funcionário{
+  Matrícula <<key>>
+  Data de admissão
+  Data de demissão
+  Cargo
+  Setor
+  Salário
+}
+
+PessoaFísica =>= d {Cliente, Funcionário}
+
+relationship Transação_Estoque{
+  id <<key>>
+  Data da transação
+  Custo total <<derived>>
+  Número da nota fiscal
+  Quantidade
+}
+
+Fornecedor -(1,N)- Transação_Estoque
+Transação_Estoque -(1,N)- Mercadoria
+Transação_Estoque -(N,1)- Atacadasso
+
+
+relationship Transação_Cliente{
+  id <<key>>
+  Data da transação
+  Custo total <<derived>>
+  Número da nota fiscal
+  Quantidade
+}
+
+Atacadasso -1- Transação_Cliente
+Cliente -N- Transação_Cliente
+Transação_Cliente -N- Mercadoria
+
+
+relationship Trabalha{
+}
+
+Atacadasso -1- Trabalha
+Trabalha -N- Funcionário
+
+@endchen
