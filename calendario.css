@@ -75,7 +75,59 @@
     font-weight: bold;
 }
 
-/* Opcional: hover */
+/* ====================== Tooltip ====================== */
+.calendario td {
+    /* Preparação para o tooltip */
+    overflow: visible;              /* permite que o tooltip saia da célula */
+}
+
+.calendario td[conteudo]:hover::after,
+.calendario td[conteudo]:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.calendario td[conteudo]::before,
+.calendario td[conteudo]::after {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.calendario td[conteudo]::before {
+    content: "";
+    border: 8px solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.85);
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-4px);
+}
+
+.calendario td[conteudo]::after {
+    content: attr(conteudo);
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    white-space: nowrap;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-12px);
+    min-width: 120px;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Ajuste para tooltip aparecer acima da célula */
+.calendario td[conteudo]::after {
+    bottom: calc(100% + 8px);
+}
+
 .calendario td:hover {
     filter: brightness(0.92);
 }
