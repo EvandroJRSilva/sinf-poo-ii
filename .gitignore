@@ -11,13 +11,12 @@
 *.toc
 
 # Diretórios
-Plano\ de\ Ensino/
-Nova\ Apresentação/
+2025-2/
+2026-2/
+AULAS/Nova\ Apresentação/
 AULAS/Apresentação/imagens/
-Trabalhos/
-Tarefa/
+PROVAS/
 
 # Arquivos
 AULAS/01/terde.py
-Documentos/mapa_SINF_CSHNB025_2025.2_01_.pdf
 questões_av1.md

@@ -1,0 +1,81 @@
+.tabelas {
+    display: flex;
+    gap: 20px;
+}
+
+.badge{
+    color:white;
+    padding:5px 10px;
+    font-weight: bold;
+}
+
+.badge.aula {
+    background-color:#32cd32;
+}
+
+.badge.prova {
+    background-color:#dc143c;
+}
+
+.badge.feriado {
+    background-color:#6495ed;
+}
+	
+.calendario {
+    border-collapse: collapse;
+    max-width: 700px;
+    margin: 20px auto;
+    font-family: Arial, Helvetica, sans-serif;
+    table-layout: fixed;		/* ← importante: força colunas de largura igual */
+}
+
+.calendario th,
+.calendario td {
+    width: 20%;                  /* 5 colunas → cada uma 20% */
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Aplica proporção quadrada SOMENTE nas células do corpo (td) */
+.calendario td {
+    aspect-ratio: 1/1;
+}
+
+.calendario th {
+    /*background-color: #f0f0f0;
+    color: #333;*/
+    font-weight: bold;
+}
+
+/* Células normais */
+/*.calendario td {
+    background-color: #fff;
+    color: #333;
+}*/
+
+/* Classes de destaque */
+.aula {
+    background-color: #32cd32;   /* verde */
+    color: white;
+    font-weight: bold;
+}
+
+.prova {
+    background-color: #dc143c;   /* vermelho */
+    color: white;
+    font-weight: bold;
+}
+
+.feriado {
+    background-color: #6495ed;   /* azul */
+    color: white;
+    font-weight: bold;
+}
+
+/* Opcional: hover */
+.calendario td:hover {
+    filter: brightness(0.92);
+}
