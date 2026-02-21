@@ -29,9 +29,10 @@ Ementa retirada do PPC:
 
 #### Atualizada
 
-- PYTHON SOFTWARE FOUNDATION. **Python Programming Language**. Versão 3.14.2. Beaverton: Python Software Foundation, 2026. Disponível em: https://www.python.org/. Acesso em 29 jan. 2026.
-- FITZPATRICK, Martin. **PySide6 Tutorial**. Amersfoort: Python GUI Tutorials, 2026. Disponível em: https://www.pythonguis.com/pyside6/. Acesso em 29 jan. 2026.
-- PALLETS. **Flask: The Python micro framework for building web applications**. S.l.: Pallets, 2026. Disponível em: https://flask.palletsprojects.com/. Acesso em 29 jan. 2026.
+- PYTHON SOFTWARE FOUNDATION. **Python Programming Language**. Versão 3.14.2. [S.l.], 2026. Disponível em: https://www.python.org/. Acesso em 29 jan. 2026.
+- THE QT COMPANY LTD. **Qt for Python**. [S.l.], 2026. Disponível em https://doc.qt.io/qtforpython-6/. Acesso em 29 jan. 2026.
+- FITZPATRICK, Martin. **PySide6 Tutorial**. [S.l.], 2026. Disponível em: https://www.pythonguis.com/pyside6/. Acesso em 29 jan. 2026.
+- PALLETS. **Flask: The Python micro framework for building web applications**. [S.l.], 2026. Disponível em: https://flask.palletsprojects.com/. Acesso em 29 jan. 2026.
 
 ### Complementar
 
@@ -45,9 +46,10 @@ Ementa retirada do PPC:
 
 #### Atualizada
 
-- ORACLE. **MySQL**, 2026. Disponível em: https://www.mysql.com/. Acesso em: 29 jan. 2026.
-- THE SQLITE CONSORTIUM. **SQLite**, 2026. Disponível em: https://sqlite.org/. Acesso em: 29 jan. 2026.
-- BAYER, Michael. **SQLAlchemy - The Database Tookit for Python**, 2026. Disponível em: https://www.sqlalchemy.org/. Acesso em: 29 jan. 2026.
+- ORACLE. **MySQL**. [S.l.], 2026. Disponível em: https://www.mysql.com/. Acesso em: 29 jan. 2026.
+- THE SQLITE CONSORTIUM. **SQLite**. [S.l.], 2026. Disponível em: https://sqlite.org/. Acesso em: 29 jan. 2026.
+- POSTGRESQL GLOBAL DEVELOPMENT GROUP. **PostgreSQL**. Versão 18.2. [S.l.], 2026. Disponível em: www.postgresql.org. Acesso em: 29 jan. 2026.
+- BAYER, Michael. **SQLAlchemy - The Database Tookit for Python**. [S.l.], 2026. Disponível em: https://www.sqlalchemy.org/. Acesso em: 29 jan. 2026.
 
 ## Conteúdo Programático
 
