@@ -15,6 +15,7 @@
 2026-2/
 AULAS/Nova\ Apresentação/
 AULAS/Apresentação/
+AULAS/02/imagens/icons/*
 Plano de Ensino/*
 PROVAS/
 
@@ -27,3 +28,5 @@ questões_av1.md
 
 # Exceções
 !Plano de Ensino/plano_ensino.pdf
+!AULAS/02/imagens/icons/android.png
+!AULAS/02/imagens/icons/bug.png
