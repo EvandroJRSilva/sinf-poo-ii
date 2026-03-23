@@ -7,3 +7,6 @@
     - Pasta criada: imagens/
       - Acréscimo de imagens e ícones
   - Ajustes no arquivo .gitignore
+- 2026.1.3
+  - AULAS/03/
+    - Atualização de aula03.ipynb
