@@ -1,12 +1,17 @@
 - 2026.1.2
-  - Acréscimo do arquivo changelog.md
+  - Acréscimo do arquivo `changelog.md`
   - AULAS/01/
-    - Ajustes diversos em aula01.ipynb
+    - Ajustes diversos em `aula01.ipynb`
   - AULAS/02/
-    - Atualização de aula02.ipynb
-    - Pasta criada: imagens/
+    - Atualização de `aula02.ipynb`
+    - Pasta criada: `imagens/`
       - Acréscimo de imagens e ícones
-  - Ajustes no arquivo .gitignore
+  - Ajustes no arquivo `.gitignore`
 - 2026.1.3
   - AULAS/03/
-    - Atualização de aula03.ipynb
+    - Atualização de `aula03.ipynb`
+- 2026.1.3.1
+  - AULAS/03/
+    - Pequenas alterações no arquivo `aula03.ipynb`
+  - Atualização do arquivo `exercícios_av1.md`
+  - Pequena atualização no arquivo `.gitignore`
