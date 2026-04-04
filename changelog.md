@@ -15,3 +15,8 @@
     - Pequenas alterações no arquivo `aula03.ipynb`
   - Atualização do arquivo `exercícios_av1.md`
   - Pequena atualização no arquivo `.gitignore`
+- 2026.1.4
+  - AULAS/04/
+    - Remanejamento e renomeação do arquivo `aula04.ipynb` (fazia parte da pasta de outra aula e tinha um nome diferente).
+    - Remanejamento dos arquivos `teste.txt` e `teste2.txt` (faziam parte da pasta de outra aula).
+  - Ajuste no arquivo `.gitignore`.
