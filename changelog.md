@@ -20,3 +20,9 @@
     - Remanejamento e renomeação do arquivo `aula04.ipynb` (fazia parte da pasta de outra aula e tinha um nome diferente).
     - Remanejamento dos arquivos `teste.txt` e `teste2.txt` (faziam parte da pasta de outra aula).
   - Ajuste no arquivo `.gitignore`.
+- 2026.1.5
+  - AULAS/04/
+    - Adição de um TODO em `aula04.ipynb`. Outras modificações menores (maioria, senão todas, de execução de código de células).
+  - AULAS/05/
+    - Remanejamento, renomeação e atualização do arquivo `aula05.ipynb` (fazia parte da pasta da aula 06 e tinha o nome csv.ipynb).
+    - Arquivos referentes a MVC com Tkinter movidos para a pasta da aula 06.
