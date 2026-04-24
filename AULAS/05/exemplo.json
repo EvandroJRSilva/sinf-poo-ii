@@ -1,18 +1,22 @@
 [
     {
-        "nome" : "Trabalho de SO",
+        "nome" : "Trabalho de POO II",
         "membros" : [
             {
-                "nome": "Rogers",
-                "especialidade": "Ser fiel demais"
+                "nome": "Fábio",
+                "especialidade": "Jogar Vôlei"
             },
             {
-                "nome": "Tiago sem agá",
-                "especialidade": "Não perder o ônibus"
-            },
-            {
-                "nome": "Brenda Evelyn",
+                "nome": "Júlia",
                 "especialidade": "Ser ruim em banco de dados"
+            },
+            {
+                "nome": "Maurício",
+                "especialidade": "Programação em C"
+            },
+            {
+                "nome": "Rhyan",
+                "especialidade": "Jogar Futebol"
             }
         ]
     },
