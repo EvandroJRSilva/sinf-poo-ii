@@ -26,3 +26,9 @@
   - AULAS/05/
     - Remanejamento, renomeação e atualização do arquivo `aula05.ipynb` (fazia parte da pasta da aula 06 e tinha o nome csv.ipynb).
     - Arquivos referentes a MVC com Tkinter movidos para a pasta da aula 06.
+- 2026.1.6
+  - AULAS/06/
+    - Atualização e renomeação de um arquivo para `aula06.ipynb`.
+    - Acréscimo de arquivos de exemplo para os formatos `.txt`, `.json` e `.csv`.
+    - Acréscimo de scripts de exemplo para manipulação de arquivos a partir de uma UI com PySide6.
+    - Exclusão de todos os demais arquivos.
