@@ -32,3 +32,16 @@
     - Acréscimo de arquivos de exemplo para os formatos `.txt`, `.json` e `.csv`.
     - Acréscimo de scripts de exemplo para manipulação de arquivos a partir de uma UI com PySide6.
     - Exclusão de todos os demais arquivos.
+- 2026.1.6.1
+  - AULAS/06/
+    - Atualização do arquivo `aula06.ipynb`. Conteúdo antigo excluído e inserção de links para os respectivos exemplos.
+  - AULAS/04/
+    - Atualização com as modificações feitas em sala de aula no arquivo `aula04.ipynb`.
+  - AULAS/05/
+    - Atualizações com as modificações feitas em sala de aula nos arquivos `aula05.ipynb`, `exemplo.json` e `usuario.json`.
+- 2026.1.7
+  - AULAS/07/
+    - Removidos arquivos de exemplos do conteúdo anterior.
+    - Removidas imagens do conteúdo anterior.
+    - Removido o arquivo `aula07.md`.
+    - Adicionado o arquivo `aula07.ipynb`.
