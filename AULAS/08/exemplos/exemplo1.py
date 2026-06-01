@@ -11,8 +11,8 @@ if 'Universidade Federal do Piauí' in r.text:
 else:
     print('A página não tem o nome da universidade')
     
-# Baixando o logo ddo site
-logo_url = 'https://ufpi.br/templates/templatedefault/favicon.ico'
+# Baixando o logo do site
+logo_url = 'https://ufpi.br/images/assets/ufpi-icone1%201.png#joomlaImage://local-images/assets/ufpi-icone1%201.png?width=99&height=149'
 r = requests.get(logo_url)
 
 with open('AULAS/08/exemplos/logo_ufpi.ico', 'wb') as f:

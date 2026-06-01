@@ -45,3 +45,13 @@
     - Removidas imagens do conteúdo anterior.
     - Removido o arquivo `aula07.md`.
     - Adicionado o arquivo `aula07.ipynb`.
+- 2026.1.8
+  - AULAS/07/
+    - Atualização de `aula07.ipynb`, das mudanças da última aula.
+  - AULAS/08/
+    - Adicionado `aula08.md`
+    - `imagens`
+      - Adicionadas imagens.
+    - `exemplos`
+      - Atualização de `exemplo1.py`.
+      - Acréscimo de `exemplo4.py` e `flask_exemplo.py`.
