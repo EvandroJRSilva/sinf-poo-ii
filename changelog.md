@@ -64,3 +64,7 @@
     - Inserção dos arquivos `docker-introdução.odp` e `docker-introdução.pptx` como versão em slides de `aula09.md`.
     - Inserção de imagens.
     - Exclusão de arquivos de exemplos do conteúdo legado.
+- 2026.1.10
+  - AULAS/10/
+    - Criação de `aula10.md`.
+    - Criação de pasta de imagens.
