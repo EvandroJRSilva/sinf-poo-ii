@@ -1,7 +1,8 @@
 import requests
 
 # Seguindo redirecionamentos e ver o histórico
-r = requests.get('http://ufpi.br', allow_redirects=True)
+#r = requests.get('https://ufpi.br/conecta', allow_redirects=True)
+r = requests.get('https://www.sigaa.ufpi.br/', allow_redirects=True)
 print(f'URL final após redirecionamentos: {r.url}')
 print('Histórico de redirecionamentos:')
 for h in r.history:

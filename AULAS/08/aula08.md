@@ -81,3 +81,23 @@ No aplicativo desktop existente, em todos os locais do sistema onde há troca de
 O Banco de Dados pode ser uma instância simples do `SQLite` ou alguma imagem do `MySQL` ou `PostgreSQL`. O `Flask` pode ser implementado para receber as requisições HTTP e enviá-las ao banco.
 
 Essa comunicação pode ocorrer via ORM, ou através de alguma biblioteca específica do Python.
+
+## Exemplos [legado]
+
+A GUI do cliente é feita com Tkinter. O servidor de desenvolvimento é criado com Flask, e as requisições enviadas e recebias via Requests.
+
+- Gerenciador de Tarefas
+  - [Servidor](exemplos/legado/exemplo1/server_tasks.py)
+  - [Cliente](exemplos/legado/exemplo1/client_tasks.py)
+- Gerenciador de contatos
+  - [Servidor](exemplos/legado/exemplo2/server_contacts.py)
+  - [Cliente](exemplos/legado/exemplo2/client_contacts.py)
+- Calculadora de orçamento pessoal
+  - [Servidor](exemplos/legado/exemplo3/server_budget.py)
+  - [Cliente](exemplos/legado/exemplo3/client_budget.py)
+- Diário pessoal
+  - [Servidor](exemplos/legado/exemplo4/server_diary.py)
+  - [Cliente](exemplos/legado/exemplo4/client_diary.py)
+- Biblioteca pessoal
+  - [Servidor](exemplos/legado/exemplo5/server_books.py)
+  - [Cliente](exemplos/legado/exemplo5/client_books.py)

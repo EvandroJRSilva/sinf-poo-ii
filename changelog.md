@@ -55,3 +55,12 @@
     - `exemplos`
       - Atualização de `exemplo1.py`.
       - Acréscimo de `exemplo4.py` e `flask_exemplo.py`.
+- 2026.1.9
+  - AULAS/08/
+    - Atualização de `aula08.md`, com acréscimo de arquivos exemplos legados.
+    - Ajuste/atualização dos arquivos `exemplo1.py` e `exemplo3.py`.
+  - AULAS/09/
+    - Atualização da `aula09.md`, com uma versão incompleta da aula sobre Docker.
+    - Inserção dos arquivos `docker-introdução.odp` e `docker-introdução.pptx` como versão em slides de `aula09.md`.
+    - Inserção de imagens.
+    - Exclusão de arquivos de exemplos do conteúdo legado.
