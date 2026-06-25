@@ -68,3 +68,6 @@
   - AULAS/10/
     - Criação de `aula10.md`.
     - Criação de pasta de imagens.
+- 2026.1.10.1
+  - AULAS/09/
+    - Atualização da `aula09.md`, com um pouco mais de material sobre o Docker.
