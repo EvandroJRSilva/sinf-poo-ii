@@ -1,7 +1,9 @@
 # Extensões
 *.aux
 *.bcf
+*.lof
 *.log
+*.lot
 *.nav
 *.out
 *.run.xml
@@ -16,6 +18,7 @@
 AULAS/Nova\ Apresentação/
 AULAS/Apresentação/
 AULAS/02/imagens/icons/*
+Materiais/
 Plano de Ensino/*
 PROVAS/
 
