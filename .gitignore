@@ -1,6 +1,9 @@
 # Extensões
 *.aux
+*.bbl
 *.bcf
+*.bib
+*.blg
 *.lof
 *.log
 *.lot

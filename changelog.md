@@ -1,4 +1,7 @@
-- 2026.2.0
+- 2026.2.0.0
   - "Restart" do `changelog.md`.
   - Novas entradas no `.gitignore`.
   - Guia da disciplina POO 2 v0.1.
+- 2026.2.0.1
+  - Novas entradas no `.gitignore` referentes aos arquivos relacionados ao LaTeX.
+  - Guia da disciplina POO 2 v0.2.
