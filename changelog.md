@@ -5,3 +5,7 @@
 - 2026.2.0.1
   - Novas entradas no `.gitignore` referentes aos arquivos relacionados ao LaTeX.
   - Guia da disciplina POO 2 v0.2.
+- 2026.2.0.2
+  - Nova entrada no `.gitignore`
+    - Guia de POO2 colocado como privado.
+  - `README.md` atualizado com calendário 2026.2

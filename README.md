@@ -116,315 +116,42 @@ O documento deve ser enviado para o e-mail <a href="mailto:evandro.silva@ufpi.ed
 
 ## Calendário
 
-<link rel="stylesheet" href="calendario.css">
-
-<!--<span style="background-color:#32cd32;color:white;padding:5px 10px;"><b>AULA</b></span>-->
-<span class="badge aula">AULA</span>
-<span class="badge feriado">FERIADO</span>
-<span class="badge prova">PROVA</span>
-
-<div class="tabelas">
-  <table class="calendario">
-  	<thead>
-  		<tr><th colspan="5">Março</th></tr>
-  		<tr>
-  			<th>Seg</th>
-  			<th>Ter</th>
-  			<th>Qua</th>
-  			<th>Qui</th>
-  			<th>Sex</th>
-  		</tr>
-  	</thead>
-  	<tbody>
-  		<tr>
-  			<td>02</td>
-  			<td>03</td>
-  			<td>04</td>
-  			<td>05</td>
-  			<td>06</td>
-  		</tr>
-  		<tr>
-  			<td>09</td>
-  			<td class="aula" conteudo="PySide6: Introdução; Sinais, Slots & Eventos; Widgets.">10</td>
-  			<td>11</td>
-  			<td>12</td>
-  			<td class="aula" conteudo="Prática">13</td>
-  		</tr>
-  		<tr>
-  			<td>16</td>
-  			<td class="aula" conteudo="PySide6: Layouts; Barras de ferramentas e Menus.">17</td>
-  			<td>18</td>
-  			<td>19</td>
-  			<td class="aula" conteudo="Prática">20</td>
-  		</tr>
-  		<tr>
-  			<td>23</td>
-  			<td class="aula" conteudo="PySide6: Dialogs e Alerts; Criando janelas adicionais.">24</td>
-  			<td>25</td>
-  			<td>26</td>
-  			<td class="aula" conteudo="Prática">27</td>
-  		</tr>
-  		<tr>
-  			<td>30</td>
-  			<td class="prova" conteudo="AV1">31</td>
-  			<td></td>
-  			<td></td>
-  			<td></td>
-  		</tr>
-  	</tbody>
-  </table>
-
-  <table class="calendario">
-  	<thead>
-  		<tr><th colspan="5">Abril</th></tr>
-  		<tr>
-  			<th>Seg</th>
-  			<th>Ter</th>
-  			<th>Qua</th>
-  			<th>Qui</th>
-  			<th>Sex</th>
-  		</tr>
-  	</thead>
-  	<tbody>
-  		<tr>
-  			<td></td>
-  			<td></td>
-  			<td>01</td>
-  			<td>02</td>
-  			<td class="feriado" conteudo="Sexta-feira da paixão">03</td>
-  		</tr>
-  		<tr>
-  			<td>06</td>
-  			<td class="aula" conteudo="Arquivos em Python">07</td>
-  			<td>08</td>
-  			<td>09</td>
-  			<td class="aula" conteudo="Prática">10</td>
-  		</tr>
-  		<tr>
-  			<td>13</td>
-  			<td class="aula" conteudo="Threads em Python">14</td>
-  			<td>15</td>
-  			<td>16</td>
-  			<td class="aula" conteudo="Prática">17</td>
-  		</tr>
-  		<tr>
-  			<td>20</td>
-  			<td class="feriado" conteudo="Tiradentes">21</td>
-  			<td>22</td>
-  			<td>23</td>
-  			<td class="aula" conteudo="Serialização de dados: CSV e JSON.">24</td>
-  		</tr>
-  		<tr>
-  			<td>27</td>
-  			<td class="aula" conteudo="Prática">28</td>
-  			<td>29</td>
-  			<td>30</td>
-  			<td></td>
-  		</tr>
-  	</tbody>
-  </table>
-
-  <table class="calendario">
-  	<thead>
-  		<tr><th colspan="5">Maio</th></tr>
-  		<tr>
-  			<th>Seg</th>
-  			<th>Ter</th>
-  			<th>Qua</th>
-  			<th>Qui</th>
-  			<th>Sex</th>
-  		</tr>
-  	</thead>
-  	<tbody>
-  		<tr>
-  			<td></td>
-  			<td></td>
-  			<td></td>
-  			<td></td>
-  			<td class="feriado" conteudo="Dia do Trabalho">01</td>
-  		</tr>
-  		<tr>
-  			<td>04</td>
-  			<td class="aula" conteudo="PySide6: Multithreading">05</td>
-  			<td>06</td>
-  			<td>07</td>
-  			<td class="aula" conteudo="PySide6: Execução de programas externos">08</td>
-  		</tr>
-  		<tr>
-  			<td>11</td>
-  			<td class="aula" conteudo="Prática">12</td>
-  			<td>13</td>
-  			<td>14</td>
-  			<td class="prova" conteudo="AV2">15</td>
-  		</tr>
-  		<tr>
-  			<td>18</td>
-  			<td class="prova" conteudo="AV2">19</td>
-  			<td>20</td>
-  			<td>21</td>
-  			<td class="aula" conteudo="Noções básicas de rede + Flask">22</td>
-  		</tr>
-  		<tr>
-  			<td>25</td>
-  			<td class="aula" conteudo="Docker">26</td>
-  			<td>27</td>
-  			<td>28</td>
-  			<td class="aula" conteudo="Prática">29</td>
-  		</tr>
-  	</tbody>
-  </table>
-
-  <table class="calendario">
-  	<thead>
-  		<tr><th colspan="5">Junho</th></tr>
-  		<tr>
-  			<th>Seg</th>
-  			<th>Ter</th>
-  			<th>Qua</th>
-  			<th>Qui</th>
-  			<th>Sex</th>
-  		</tr>
-  	</thead>
-  	<tbody>
-  		<tr>
-  			<td>01</td>
-  			<td class="aula" conteudo="Banco de dados: revisão">02</td>
-  			<td>03</td>
-  			<td class="feriado" conteudo="Corpus Christi">04</td>
-			<td style="background-image: repeating-linear-gradient(135deg, #32cd32, #32cd32 10px, #6495ed 10px, #6495ed 20px);" conteudo="Ponto facultativo / Prática">05</td>
-  		</tr>
-  		<tr>
-  			<td>08</td>
-  			<td class="aula" conteudo="Conexão com banco de dados">09</td>
-  			<td>10</td>
-  			<td>11</td>
-  			<td class="aula" conteudo="Prática">12</td>
-  		</tr>
-  		<tr>
-  			<td>15</td>
-  			<td class="aula" conteudo="ORM: SQLAlchemy">16</td>
-  			<td>17</td>
-  			<td>18</td>
-  			<td class="aula" conteudo="Prática">19</td>
-  		</tr>
-  		<tr>
-  			<td>22</td>
-  			<td class="aula" conteudo="Prática">23</td>
-  			<td>24</td>
-  			<td>25</td>
-  			<td class="prova" conteudo="AV3">26</td>
-  		</tr>
-  		<tr>
-  			<td>29</td>
-  			<td class="prova" conteudo="AV3">30</td>
-  			<td></td>
-  			<td></td>
-  			<td></td>
-  		</tr>
-  	</tbody>
-  </table>
-
-  <table class="calendario">
-  	<thead>
-  		<tr><th colspan="5">Julho</th></tr>
-  		<tr>
-  			<th>Seg</th>
-  			<th>Ter</th>
-  			<th>Qua</th>
-  			<th>Qui</th>
-  			<th>Sex</th>
-  		</tr>
-  	</thead>
-  	<tbody>
-  		<tr>
-  			<td></td>
-  			<td></td>
-  			<td>01</td>
-  			<td>02</td>
-			<td class="aula" conteudo="Livre">03</td>
-  		</tr>
-  		<tr>
-  			<td>06</td>
-  			<td class="prova" conteudo="Avaliação Final">07</td>
-  			<td>08</td>
-  			<td>09</td>
-  			<td>10</td>
-  		</tr>
-  		<tr>
-  			<td>13</td>
-  			<td>14</td>
-  			<td>15</td>
-  			<td>16</td>
-  			<td>17</td>
-  		</tr>
-  		<tr>
-  			<td>20</td>
-  			<td>21</td>
-  			<td>22</td>
-  			<td>23</td>
-  			<td>24</td>
-  		</tr>
-  		<tr>
-  			<td>27</td>
-  			<td>28</td>
-  			<td>29</td>
-  			<td>30</td>
-  			<td>31</td>
-  		</tr>
-  	</tbody>
-  </table>
-</div>
-
-<!--
-<div class="tabelas">
-  <ul style="padding: 15px;margin:0;max-width: 200px;">
-	<li><b>10</b>: PySide6
-		<ul>
-			<li>Introdução.</li>
-			<li>Sinais, <i>Slots</i> & Eventos.</li>
-			<li>Widgets.</li>
-		</ul>
-	</li>
-	<li><b>13</b>: Prática</li>
-	<li><b>17</b>: PySide6
-		<ul>
-			<li>Layouts.</li>
-			<li>Barras de ferramentas e Menus.</li>
-		</ul>
-	</li>
-	<li><b>20</b>: Prática</li>
-	<li><b>24</b>: PySide6
-		<ul>
-			<li><i>Dialogs</i>, <i>Alerts</i> e criação de janelas adicionais.</li>
-		</ul>
-	</li>
-	<li><b>27</b>: Prática</li>
-	<li><b>31</b>: AV1</li>
-  </ul>
-
-  <ul style="padding: 10px;margin:0;max-width: 200px;">
-	<li><b>10</b>: PySide6
-		<ul>
-			<li>Introdução.</li>
-			<li>Sinais, <i>Slots</i> & Eventos.</li>
-			<li>Widgets.</li>
-		</ul>
-	</li>
-	<li><b>13</b>: Prática</li>
-	<li><b>17</b>: PySide6
-		<ul>
-			<li>Layouts.</li>
-			<li>Barras de ferramentas e Menus.</li>
-		</ul>
-	</li>
-	<li><b>20</b>: Prática</li>
-	<li><b>24</b>: PySide6
-		<ul>
-			<li><i>Dialogs</i>, <i>Alerts</i> e criação de janelas adicionais.</li>
-		</ul>
-	</li>
-	<li><b>27</b>: Prática</li>
-	<li><b>31</b>: AV1</li>
-  </ul>
-</div>
--->
+| **AULA** | **DATA** | **Dia da Semana** | **CONTEÚDO** |
+|---|---|---|---|
+| 01 | 11/08/26 | Terça | Apresentação da disciplina <br> PySide6: Sinais, Slots & Eventos |
+| 02 | 14/08/26 | Sexta | Prática |
+| 03 | 18/08/26 | Terça | PySide6: Widgets e Layouts |
+| 04 | 21/08/26 | Sexta | Prática |
+| 05 | 25/08/26 | Terça | PySide6: Barras de ferramentas e Menus. |
+| 06 | 28/08/26 | Sexta | Prática |
+| 07 | 01/09/26 | Terça | Pyside6: Dialogs e Alerts; Criando janelas adicionais. |
+| 08 | 04/09/26 | Sexta | Prática |
+| 09 | 08/09/26 | Terça | Revisão |
+| 10 | 11/09/26 | Sexta | Primeira Avaliação |
+| 11 | 15/09/26 | Terça | Arquivos em Python |
+| 12 | 18/09/26 | Sexta | Prática |
+| 13 | 22/09/26 | Terça | Threads em Python |
+| 14 | 25/09/26 | Sexta | Prática |
+| 	 | 29/09/26 | Terça | SINFO |
+| 15 | 02/10/26 | Sexta | Prática |
+| 16 | 06/10/26 | Terça | Serialização de dados: CSV e JSON |
+| 17 | 09/10/26 | Sexta | Prática |
+| 18 | 13/10/26 | Terça | PySide6: Multithreading |
+| 19 | 16/10/26 | Sexta | Prática |
+| 	 | 20/10/26 | Terça | BRACIS |
+| 20 | 23/10/26 | Sexta | Prática |
+| 21 | 27/10/26 | Terça | Segunda Avaliação |
+| 22 | 30/10/26 | Sexta | Segunda Avaliação |
+| 23 | 03/11/26 | Terça | Noções básicas de rede + Flask |
+| 24 | 06/11/26 | Sexta | Prática |
+| 25 | 10/11/26 | Terça | Docker |
+| 26 | 13/11/26 | Sexta | Prática |
+| 27 | 17/11/26 | Terça | Bancos de dados: revisão <br> ORM: SQLAlchemy |
+| 28 | 20/11/26 | Sexta | Prática |
+| 	 | 24/11/26 | Terça | |
+| 	 | 27/11/26 | Sexta | |
+| 29 | 01/12/26 | Terça | Terceira Avaliação |
+| 30 | 04/12/26 | Sexta | Terceira Avaliação |
+| 	 | 08/12/26 | Terça | |
+| 	 | 11/12/26 | Sexta | Avaliação Final |
+| 	 | 15/12/26 | Terça | |
