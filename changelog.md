@@ -9,3 +9,10 @@
   - Nova entrada no `.gitignore`
     - Guia de POO2 colocado como privado.
   - `README.md` atualizado com calendário 2026.2
+- 2026.2.1
+  - Parte de `aula01.ipynb` transportada para `aula01.md`.
+  - Arquivos de exemplos na pasta `exemplos/`.
+  - Ajuste do arquivo `README.md`
+    - Conteúdos das aulas 01 e 02.
+  - Exclusão do arquivo `aula01.ipynb`.
+  - Arquivo excluído e retirado do `.gitignore`

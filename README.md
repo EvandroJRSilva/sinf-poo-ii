@@ -118,9 +118,9 @@ O documento deve ser enviado para o e-mail <a href="mailto:evandro.silva@ufpi.ed
 
 | **AULA** | **DATA** | **Dia da Semana** | **CONTEÚDO** |
 |---|---|---|---|
-| 01 | 11/08/26 | Terça | Apresentação da disciplina <br> PySide6: Sinais, Slots & Eventos |
+| 01 | 11/08/26 | Terça | Apresentação da disciplina <br> PySide6: Introdução, Sinais e Slots |
 | 02 | 14/08/26 | Sexta | Prática |
-| 03 | 18/08/26 | Terça | PySide6: Widgets e Layouts |
+| 03 | 18/08/26 | Terça | PySide6: Eventos, Widgets e Layouts |
 | 04 | 21/08/26 | Sexta | Prática |
 | 05 | 25/08/26 | Terça | PySide6: Barras de ferramentas e Menus. |
 | 06 | 28/08/26 | Sexta | Prática |
