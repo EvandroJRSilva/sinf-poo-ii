@@ -16,3 +16,5 @@
     - Conteúdos das aulas 01 e 02.
   - Exclusão do arquivo `aula01.ipynb`.
   - Arquivo excluído e retirado do `.gitignore`
+- 2026.2.1.1
+  - Atualização do arquivo `REAME.md`.
