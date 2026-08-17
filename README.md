@@ -48,7 +48,7 @@ Ementa retirada do PPC:
 
 - ORACLE. **MySQL**. [S.l.], 2026. Disponível em: https://www.mysql.com/. Acesso em: 29 jan. 2026.
 - THE SQLITE CONSORTIUM. **SQLite**. [S.l.], 2026. Disponível em: https://sqlite.org/. Acesso em: 29 jan. 2026.
-- POSTGRESQL GLOBAL DEVELOPMENT GROUP. **PostgreSQL**. Versão 18.2. [S.l.], 2026. Disponível em: www.postgresql.org. Acesso em: 29 jan. 2026.
+- POSTGRESQL GLOBAL DEVELOPMENT GROUP. **PostgreSQL**. Versão 18.2. [S.l.], 2026. Disponível em: https://www.postgresql.org. Acesso em: 29 jan. 2026.
 - BAYER, Michael. **SQLAlchemy - The Database Tookit for Python**. [S.l.], 2026. Disponível em: https://www.sqlalchemy.org/. Acesso em: 29 jan. 2026.
 
 ## Conteúdo Programático

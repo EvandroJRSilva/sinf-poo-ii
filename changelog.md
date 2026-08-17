@@ -17,4 +17,15 @@
   - Exclusão do arquivo `aula01.ipynb`.
   - Arquivo excluído e retirado do `.gitignore`
 - 2026.2.1.1
-  - Atualização do arquivo `REAME.md`.
+  - Atualização do arquivo `README.md`.
+- 2026.2.2
+  - `AULAS/`
+    - `01/imagens/`
+      - Excluídas imagens que não estão sendo usadas na aula.
+    - `02/`
+      - Inserida a pasta `exemplos/`.
+      - `imagens/`
+        - Excluída a pasta `icons/`.
+        - Excluída imagem que não estava sendo usada na aula.
+      - Arquivo `aula02.ipynb` substituído pelo arquivo `aula02.md`.
+  - Atualização do `.gitignore`, devido às exclusões de arquivos e pastas.
