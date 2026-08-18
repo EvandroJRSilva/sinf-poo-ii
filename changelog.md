@@ -29,3 +29,7 @@
         - Excluída imagem que não estava sendo usada na aula.
       - Arquivo `aula02.ipynb` substituído pelo arquivo `aula02.md`.
   - Atualização do `.gitignore`, devido às exclusões de arquivos e pastas.
+- 2026.2.2.1
+  - `AULAS/02`
+    - Atualização de `aula02.md`, com melhor explicação sobre eventos.
+  - Atualização do `.gitignore`.

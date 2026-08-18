@@ -13,6 +13,8 @@
 
 - [Aula 02](#aula-02)
   - [Eventos](#eventos)
+    - [Como funciona](#como-funciona)
+    - [Diferenças entre `signals` e `events`](#diferenças-entre-signals-e-events)
       - [Eventos de mouse](#eventos-de-mouse)
   - [Widgets](#widgets)
   - [Layouts](#layouts)
@@ -42,15 +44,23 @@
 
 ## Eventos
 
-Todas as interações que ocorrem em uma aplicação `Qt` são **eventos**. Existem vários tipos de **eventos**, cada um representando um tipo diferente de interação. No `Qt` eles são representados através de **objetos**, os quais empacotam informação sobre o que ocorreu.
+Todas as interações de **baixo nível** que ocorrem em uma aplicação `Qt` são **eventos**. Ou seja, são as interações do usuário que envolvem, por exemplo, o uso do mouse, teclado, etc., mas capturados pelo sistema de janelas, e não pelos `widgets` em si.
 
-Os **eventos** são passados para manipuladores (`handlers`) específicos no widget onde a interação aconteceu.
+### Como funciona
 
-Ao definir manipuladores (`handlers`)  personalizados, ou extender algum que já existe, é possível alterar a forma como os widgets respondem aos **eventos**.
+O `main event loop` do `Qt` ([`exec()`](https://doc.qt.io/qtforpython-6/PySide6/QtCore/QCoreApplication.html#PySide6.QtCore.QCoreApplication.exec)) busca eventos nativos do sistema de janelas na fila de eventos (`event queue`), "traduz" eles na forma de instâncias de [`QEvent`](https://doc.qt.io/qtforpython-6/PySide6/QtCore/QEvent.html) e os envia a um [`QObject`](https://doc.qt.io/qtforpython-6/PySide6/QtCore/QObject.html#PySide6.QtCore.QObject).
 
-Classe principal: [QEvent](https://doc.qt.io/qtforpython-6/PySide6/QtCore/QEvent.html#PySide6.QtCore.QEvent).
+As instâncias de [`QObject`](https://doc.qt.io/qtforpython-6/PySide6/QtCore/QObject.html#PySide6.QtCore.QObject) recebem os eventos ao terem sua função [`event()`](https://doc.qt.io/qtforpython-6/PySide6/QtCore/QObject.html#PySide6.QtCore.QObject.event) chamada. Essa função pode ser reimplementada em subclasses para personalizar o tratamento de eventos e adicionar [tipos de evento](https://doc.qt.io/qtforpython-6/PySide6/QtCore/QEvent.html#PySide6.QtCore.QEvent.Type). Por padrão, eventos são enviados para manipuladores de eventos (*event handlers*).
 
-Diferenças principais entre **sinais** e **eventos**:
+Os variados tipos de eventos são implementados por subclasses de [`QEvent`](https://doc.qt.io/qtforpython-6/PySide6/QtCore/QEvent.html).
+
+Nos `widgets` os manipuladores de evento (*event handlers*) foram implementados como [métodos virtuais](https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QWidget.html#virtual-methods), os quais podem ser reimplementados para a personalização de tratamento de eventos que ocorram a partir da interação do usuário com um `widget` em específico. O que ocorre é o mesmo descrito alguns parágrafos acima, porém o `QObject` é um `QWidget`, e a função `event()` é um dos métodos virtuais.
+
+Mais especificamente o `Qt` chama esses métodos passando instâncias de subclasses de `QEvent` por parâmetro.
+
+Apesar de tanto **eventos** quanto **sinais** serem respostas à interação de um usuário, ambos são de natureza diferente.
+
+### Diferenças entre `signals` e `events`
 
 | **Característica** | `Signals` | `Events` |
 |---|---|---|
