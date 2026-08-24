@@ -33,3 +33,9 @@
   - `AULAS/02`
     - Atualização de `aula02.md`, com melhor explicação sobre eventos.
   - Atualização do `.gitignore`.
+- 2026.2.3
+  - `AULAS/03`
+    - Arquivo `aula03.ipynb` excluído.
+    - Arquivo `aula03.md` criado.
+    - Pasta `exemplos/` criada.
+    - Pasta `imagens/` criada.
