@@ -39,3 +39,8 @@
     - Arquivo `aula03.md` criado.
     - Pasta `exemplos/` criada.
     - Pasta `imagens/` criada.
+- 2026.2.4
+  - `AULAS/04`
+    - Adicionada a pasta `exemplos/`.
+    - Excluídos os arquivos `aula04.ipynb`, `teste.txt` e `teste2.txt`.
+    - Adicionado o arquivo `aula04.md`.
