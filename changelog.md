@@ -44,3 +44,5 @@
     - Adicionada a pasta `exemplos/`.
     - Excluídos os arquivos `aula04.ipynb`, `teste.txt` e `teste2.txt`.
     - Adicionado o arquivo `aula04.md`.
+- 2026.2.4.1
+  - Exclusão das pastas `AULAS/05/` a  `AULAS/10/`, para evitar confusão dos alunos em relação ao conteúdo que faz parte desse semestre específico.
