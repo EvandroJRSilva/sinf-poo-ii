@@ -46,3 +46,10 @@
     - Adicionado o arquivo `aula04.md`.
 - 2026.2.4.1
   - Exclusão das pastas `AULAS/05/` a  `AULAS/10/`, para evitar confusão dos alunos em relação ao conteúdo que faz parte desse semestre específico.
+- 2026.2.5
+  - `AULAS/05`
+    - Criação da pasta `exemplos/` com os exemplos utilizados no arquivo `aula05.md`.
+    - Criação de `aula05.md`, arquivo principal de aula.
+  - `.gitignore`: nova entrada.
+  - Exclusão da pasta `Projeto/`.
+  - Exclusão do arquivo `calendario.css`.
