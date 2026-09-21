@@ -53,3 +53,9 @@
   - `.gitignore`: nova entrada.
   - Exclusão da pasta `Projeto/`.
   - Exclusão do arquivo `calendario.css`.
+- 2026.2.6
+  - `README.md`
+    - Ajuste dos tópicos das aulas.
+  - `AULAS/06`
+    - Inclusão da pasta `exemplos/`, com exemplos de código e arquivos (`housing.csv` e `usuario.json`).
+    - Inclusão do arquivo `aula06.md`.

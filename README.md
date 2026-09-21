@@ -148,11 +148,11 @@ O documento deve ser enviado para o e-mail <a href="mailto:evandro.silva@ufpi.ed
 | 10 | 11/09/26 | Sexta | Primeira Avaliação |
 | 11 | 15/09/26 | Terça | Arquivos em Python |
 | 12 | 18/09/26 | Sexta | Prática |
-| 13 | 22/09/26 | Terça | Threads em Python |
+| 13 | 22/09/26 | Terça | Serialização de dados: CSV e JSON |
 | 14 | 25/09/26 | Sexta | Prática |
 | 	 | 29/09/26 | Terça | SINFO |
 | 15 | 02/10/26 | Sexta | Prática |
-| 16 | 06/10/26 | Terça | Serialização de dados: CSV e JSON |
+| 16 | 06/10/26 | Terça | PySide6: Manipulação de arquivos |
 | 17 | 09/10/26 | Sexta | Prática |
 | 18 | 13/10/26 | Terça | PySide6: Multithreading |
 | 19 | 16/10/26 | Sexta | Prática |
