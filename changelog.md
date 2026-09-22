@@ -59,3 +59,10 @@
   - `AULAS/06`
     - Inclusão da pasta `exemplos/`, com exemplos de código e arquivos (`housing.csv` e `usuario.json`).
     - Inclusão do arquivo `aula06.md`.
+- 2026.2.6.1
+  - `AULAS/06`
+    - `exemplos/`
+      - Arquivos `exemplo01.py`, `exemplo02.py` e `usuario.json` atualizados.
+      - No arquivo `exemplo02.py`, o exemplo foi atualizado com o uso de `r+` e atualização do JSON.
+  - `README.md`
+    - Atualização do calendário.

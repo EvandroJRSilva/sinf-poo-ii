@@ -1,14 +1,14 @@
 import json
 
 dados = {
-    "nome": "Júlia",
-    "idade": 30,
-    "habilidades": ["Python", "POO II"],
+    "nome": "Fulano",
+    "idade": 20,
+    "habilidades": ["Python", "Java"],
     "ativo": True
 }
 
 # Criando uma string JSON formatada
-json_string = json.dumps(dados, indent=4)
+json_string = json.dumps(dados, indent=2, ensure_ascii=False)
 print(json_string)
 
 # Salvando diretamente em um arquivo

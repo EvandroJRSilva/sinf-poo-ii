@@ -1,9 +1,20 @@
-{
-    "nome": "Júlia",
-    "idade": 30,
-    "habilidades": [
-        "Python",
-        "POO II"
-    ],
-    "ativo": true
-}
+[
+    {
+        "nome": "Fulano",
+        "idade": 20,
+        "habilidades": [
+            "Python",
+            "C"
+        ],
+        "ativo": true
+    },
+    {
+        "nome": "Cicrano",
+        "idade": 20,
+        "habilidades": [
+            "Python",
+            "HTML"
+        ],
+        "ativo": true
+    }
+]
