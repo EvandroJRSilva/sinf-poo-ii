@@ -66,3 +66,7 @@
       - No arquivo `exemplo02.py`, o exemplo foi atualizado com o uso de `r+` e atualização do JSON.
   - `README.md`
     - Atualização do calendário.
+- 2026.2.7
+  - `AULAS/07`
+    - Inclusão das pastas `arquivos/` e `exemplos/`.
+    - Inclusão do arquivo `aula07.md`.
