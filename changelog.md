@@ -70,3 +70,6 @@
   - `AULAS/07`
     - Inclusão das pastas `arquivos/` e `exemplos/`.
     - Inclusão do arquivo `aula07.md`.
+- 2026.2.7.1
+  - `AULAS/07`
+    - Arquivo `aula07.md` com conteúdo. No commit anterior o arquivo estava vazio.
