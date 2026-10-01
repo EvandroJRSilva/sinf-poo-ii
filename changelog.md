@@ -73,3 +73,10 @@
 - 2026.2.7.1
   - `AULAS/07`
     - Arquivo `aula07.md` com conteúdo. No commit anterior o arquivo estava vazio.
+- 2026.2.8
+  - `AULAS/08`
+    - Inclusão da pasta `imagens/`
+      - Inclusão de duas imagens ilustrativas: `Klt.jpg` e `Ult.jpg`.
+    - Inclusão da pasta `exemplos/`
+      - Inclusão dos arquivos `exemplo01.py`, `exemplo02.py`, `exemplo03.py`, `exemplo04.py` e `exemplo05.py`.
+    - Inclusão do arquivo `aula08.md`
