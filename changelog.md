@@ -80,3 +80,6 @@
     - Inclusão da pasta `exemplos/`
       - Inclusão dos arquivos `exemplo01.py`, `exemplo02.py`, `exemplo03.py`, `exemplo04.py` e `exemplo05.py`.
     - Inclusão do arquivo `aula08.md`
+- 2026.2.8.1
+  - Nova entrada no arquivo `.gitignore`.
+  - Atualização do arquivo `README.md`.

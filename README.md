@@ -157,17 +157,17 @@ O documento deve ser enviado para o e-mail <a href="mailto:evandro.silva@ufpi.ed
 | 18 | 13/10/26 | Terça | Trabalho 02 |
 | 19 | 16/10/26 | Sexta | Trabalho 02 |
 | 20 | 20/10/26 | Terça | Segunda Avaliação |
-| 21 | 23/10/26 | Sexta | Segunda Avaliação |
-| 22 | 27/10/26 | Terça | Noções básicas de rede + Flask |
-| 23 | 30/10/26 | Sexta | Docker |
-| 24 | 03/11/26 | Terça | Bancos de dados: revisão <br> ORM: SQLAlchemy |
-| 25 | 06/11/26 | Sexta | Trabalho 03 |
-| 26 | 10/11/26 | Terça | Trabalho 03 |
-| 27 | 13/11/26 | Sexta | Trabalho 03 |
-| 28 | 17/11/26 | Terça | Trabalho 03 |
-| 29 | 20/11/26 | Sexta | Trabalho 03 |
-| 30 | 24/11/26 | Terça | Terceira Avaliação |
-| 31 | 27/11/26 | Sexta | Terceira Avaliação |
+|    | 23/10/26 | Sexta |  |
+| 21 | 27/10/26 | Terça | Segunda Avaliação |
+| 22 | 30/10/26 | Sexta | Noções básicas de rede + Flask |
+| 23 | 03/11/26 | Terça | Docker |
+| 24 | 06/11/26 | Sexta | Bancos de dados: revisão <br>ORM: SQLAlchemy |
+| 25 | 10/11/26 | Terça | Trabalho 03 |
+| 26 | 13/11/26 | Sexta | Trabalho 03 |
+| 27 | 17/11/26 | Terça | Trabalho 03 |
+| 28 | 20/11/26 | Sexta | Trabalho 03 |
+| 29 | 24/11/26 | Terça | Terceira Avaliação |
+| 30 | 27/11/26 | Sexta | Terceira Avaliação |
 |    | 01/12/26 | Terça | Avaliação Final |
 |    | 04/12/26 | Sexta | |
 | 	 | 08/12/26 | Terça | |
