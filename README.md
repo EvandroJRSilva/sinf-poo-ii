@@ -159,9 +159,9 @@ O documento deve ser enviado para o e-mail <a href="mailto:evandro.silva@ufpi.ed
 | 20 | 20/10/26 | Terça | Segunda Avaliação |
 |    | 23/10/26 | Sexta |  |
 | 21 | 27/10/26 | Terça | Segunda Avaliação |
-| 22 | 30/10/26 | Sexta | Noções básicas de rede + Flask |
-| 23 | 03/11/26 | Terça | Docker |
-| 24 | 06/11/26 | Sexta | Bancos de dados: revisão <br>ORM: SQLAlchemy |
+| 22 | 30/10/26 | Sexta | Bancos de dados: revisão <br>ORM: SQLAlchemy |
+| 23 | 03/11/26 | Terça | Noções básicas de rede + Flask |
+| 24 | 06/11/26 | Sexta | Docker |
 | 25 | 10/11/26 | Terça | Trabalho 03 |
 | 26 | 13/11/26 | Sexta | Trabalho 03 |
 | 27 | 17/11/26 | Terça | Trabalho 03 |

@@ -83,3 +83,5 @@
 - 2026.2.8.1
   - Nova entrada no arquivo `.gitignore`.
   - Atualização do arquivo `README.md`.
+- 2026.2.8.2
+  - Atualização do arquivo `README.md`.
