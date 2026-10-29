@@ -85,3 +85,7 @@
   - Atualização do arquivo `README.md`.
 - 2026.2.8.2
   - Atualização do arquivo `README.md`.
+- 2026.2.9
+  - Inclusão da pasta `imagens/`
+    - Inclusão das imagens `MySQL-Logo.wine.png`, `orms-bridge.png`, `Postgresql.png` e `SQLite370.png`.
+  - Inclusão do arquivo `aula09.md`.
